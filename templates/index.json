@@ -94,8 +94,20 @@
         "padding_bottom": 36
       }
     },
-    "home": {
+    "home_hero": {
       "type": "home"
+    },
+    "home_section_1": {
+      "type": "home-section-1"
+    },
+    "home_section_2": {
+      "type": "home-section-2"
+    },
+    "home_section_3": {
+      "type": "home-section-3"
+    },
+    "home_section_4": {
+      "type": "home-section-4"
     }
     // "collage": {
     //   "type": "collage",
@@ -203,7 +215,11 @@
     // }
   },
   "order": [
-    "home",
+    "home_hero",
+    "home_section_1",
+    "home_section_2",
+    "home_section_3",
+    "home_section_4",
     // "image_banner",
     "rich_text",
     "featured_collection"
