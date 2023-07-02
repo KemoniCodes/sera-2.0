@@ -415,7 +415,7 @@ section.section-2 div.section h2 {
   grid-template-columns: 400px 400px 400px;
   margin: auto;
   padding-top: 5rem;
-  width: fit-content;
+  width: 100%;
 }
 
 .blog-info .date {
@@ -839,7 +839,7 @@ ul.child {
   bottom: -7rem;
   position: absolute;
   left: 50rem;
-  width: max-content;
+  width: 45%;
 }
 
 .product div.col-lg {
@@ -1934,9 +1934,17 @@ a.page-link:hover {
 
 
   .blogs {
-    grid-template-columns: 280px !important;
-    grid-row-gap: 3rem;
+    grid-template-columns: 100%;
+    // grid-row-gap: 3rem;
     justify-items: center;
+  }
+
+  .blog-info {
+    width: 100%;
+  }
+
+  .blog-info img {
+    width: 100%;
   }
 
 
