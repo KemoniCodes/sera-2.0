@@ -1,0 +1,147 @@
+<section class="product">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="slider-for">
+          {% for image in product.images %}
+            <div class="image-container" style="width: 397px; height: 599px;">
+              <img
+                src="{{ image.src | img_url: '500x500' }}"
+                class="image-zoom"
+                id="img1"
+                alt="image"
+                draggable="false"
+                data-zoom="{{ image.src | img_url: '500x500', scale: 4 }}"
+                style="width: 397px; height: 599px;"
+              >
+              <div class="image-details" style="width: 399px; height: 599px;"></div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="slider-nav">
+          {% for image in product.images %}
+            <div class="item" style="width: 86px; height: 130px;">
+              <a href="#"
+                ><img
+                  src="{{ image.src | img_url: '300x300' }}"
+                  style="width: 86px; height: 130px;"
+                  alt="image"
+                  draggable="false"
+              ></a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="row lg">
+      <div class="col-lg">
+        <div class="single-product-details">
+          <h3>{{ product.title }}</h3>
+          <h3 class="product-price">{{ product.price | money }}</h3>
+
+          <div class="product-detail">
+            <p style="margin-bottom: 3rem;">{{ product.description }}</p>
+
+            <div class="customfields"></div>
+
+            {% style %}
+              .customfields {
+                border-bottom: none !important;
+              }
+
+              .customfields h4 span {
+                float: none !important;
+                margin-left: 1rem;
+              }
+              .customfields span:after {
+                content: '+' !important;
+              }
+
+              .customfields span.rotate:after {
+                content: '-' !important;
+              }
+
+              .customfields span svg {
+                display: none;
+              }
+            {% endstyle %}
+            {% comment %}
+              <div class="so-accordion-wrapper" style="position: relative;">
+                {% assign shipping_tab = product.metafields.custom.return_shipping %}
+                {% assign care_tab = product.metafields.custom.tabs %}
+                {% assign shopobj = shop.metaobjects.accordion_tabs %}
+                {% assign pageHandle = product.handle %}
+
+                {% for tab in product.metafields %}
+                  <p>
+                    {{ tab }}
+                  </p>
+                {% endfor %}
+
+                <script>
+                  console.log({{ product.metafield }});
+                </script>
+
+                <script>
+                  console.log('block',{{ product.metafields }})
+                </script>
+
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'accordion_tab_title' %}
+                      <div class="tab" {{ block.shopify_attributes }}>
+                        <div class="tab-title" style="display: flex; justify-content: right; cursor:pointer;">
+                          {{ block.settings.accordion_tab }}
+                          <span id="toggle-icon" style="margin-left: 1rem;">+</span>
+                        </div>
+                        <div class="tab-content">
+                          <!-- Add dynamic content for each tab here -->
+                        </div>
+                      </div>
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            {% endcomment %}
+          </div>
+
+          <form method="post" action="/cart/add" style="bottom: 4rem; position: relative;">
+            <div class="d-flex">
+              <div class="quantity d-flex">
+                <div class="dec-btn">-</div>
+                <input type="text" value="1" class="quantity-no" name="quantity">
+                <div class="inc-btn">+</div>
+              </div>
+            </div>
+            <input type="hidden" id="variant-id" name="id" value="{{ product.variants.first.id }}">
+            <button class="add-cart" type="submit">Add to Cart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %} {% section 'product-recommendations' %} {% endcomment %}
+
+{% assign accordionTab = product.metafields.custom.tabs %}
+{% schema %}
+{
+  "name": "Product",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Accordion Tab",
+      "id": "accordion_tab",
+      "default": "{{ product.metafields.custom.tabs }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion_tab_title",
+      "name": "Accordion Tab"
+    }
+  ]
+}
+{% endschema %}
