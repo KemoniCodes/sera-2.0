@@ -1,14 +1,10 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
+    "page": {
+      "type": "page-template"
     }
   },
   "order": [
-    "main"
+    "page"
   ]
 }
