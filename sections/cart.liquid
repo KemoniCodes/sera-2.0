@@ -1,0 +1,77 @@
+<section class="cart">
+    <div class="container">
+        <form method="post" action="/cart">
+            
+              
+                    <!-- cart item-->
+
+                    {% if cart.item_count == 0 %}
+                        <h3 class="cart-no">
+                            {{settings.empty_cart_message}}
+                        </h3>
+                        {% else %}
+                            <h3 class="cart-no" style="padding-bottom: 3rem;"> cart({{cart.item_count}} items)</h3>
+                    {% endif %}
+
+                <!-- <h3 class="cart-no"> cart({{cart.item_count}} items)</h3> -->
+                    
+                {% for line_item in cart.items %}
+                    <div class="dropright-item cart-product" style="right: -4.3rem; position: relative; padding-bottom: 2rem; border-bottom: 1px solid; width: 1058px; margin-top: -1rem;">
+                        <div class="d-flex">
+                            <div class="img">
+                                <h4 class="img-1-text" style="text-align: start;"><a href="/cart/change?line={{forloop.index}}&quantity=0" class="delete">Remove</a></h4>
+                                <a href="{{line_item.product.url}}">
+                                    <img src="{{line_item.product.featured_image | img_url: '2048x'}}" alt="..." class="img-fluid" style="max-width: 230px; height: auto; margin-left: 0rem; width: 230px;">
+                                </a>
+                            </div>
+                            <div class="details product-info" id="cart-info" style="width: 320px; margin-right: 0px;">
+                                <div style="text-align: -webkit-left; left: 6.8rem; position: relative; top: -4rem;" id="cart-info">
+                                    <h4 class="img-1-text">
+                                    <a href="{{line_item.product.url}}">{{line_item.product.title}}</a>
+                                    </h4>
+                                    <h4 class="img-1-text quantity" >Quantity: <input type="text" name="updates[]" value="{{line_item.quantity}}" class="quantity-no" style="border: 1px solid; margin-left: .3rem;" >
+                                    </h4>
+                                    <h4 class="price">{{line_item.product.price | money}} </h4>
+                                    <h4 class="price" id="line-price" style="top: -5.3rem;position: relative;left: 44rem; left: 48rem;"> {{line_item.line_price | money}} </h4>
+                                </div>
+                            <input type="hidden" id="variant-id" name="id" value="{{line_item.product.id}}">
+                            <div class="col-2">
+                                <div class="d-flex align-items-center">
+                                <div class="quantity d-flex align-items-center">
+                                    <!-- <div class="dec-btn">-</div> -->
+                                    <!-- <div class="inc-btn">+</div> -->
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                    </div>
+                {% endfor %}
+
+                    {% if cart.item_count > 0 %}
+                        <!-- total price-->
+                        <div class="dropdown-item total-price d-flex justify-content-between" style="border-bottom: 1px solid; width: 1058px; padding-bottom: .2rem; padding-left: 58.4rem;
+                        left: 13.4rem; padding-right: 0rem; bottom: auto; margin-top: 10.4rem;">
+                                <h4 id="subtotal" class="img-1-text" style="font-size: 1rem;">Subtotal:</h4>
+                                <h4 id="price" class="price" style="font-size: 1rem;">{{cart.original_total_price | money}}</h4>
+                        </div>
+                        <!-- call to actions-->
+                        <div class="dropdown-item CTA d-flex">
+                            <div class="btns">
+                                <button type="button" onclick="location.href='/collections/all'" class="checkout" id="cont">Continue Shopping</button>
+                                <button type="submit" name="update" class="checkout" id="update-btn">Update Cart</button>
+                            </div>
+
+                            
+                            <div class="btns" style="position: relative;">
+                                <form method="post" action="/cart">
+                                    <button type="submit" name="checkout" class="checkout" style="outline: none;background-color: #2F2F2F;
+                                    color: #FFF9EF; width: auto; padding: .6rem .9rem; bottom: -7.5rem; margin-left: 34.7rem;">Checkout <span style="padding-left: .3rem;">→</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    {% endif %}
+            </div>
+        </form>
+    </div>
+</section>
