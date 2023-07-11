@@ -1,189 +1,162 @@
 {
-  "current": "Default",
-  "presets": {
-    "Default": {
-      "logo_width": 90,
-      "color_schemes": {
-        "background-1": {
-          "settings": {
-            "background": "#FFFFFF",
-            "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
-            "button_label": "#FFFFFF",
-            "secondary_button_label": "#121212",
-            "shadow": "#121212"
-          }
-        },
-        "background-2": {
-          "settings": {
-            "background": "#F3F3F3",
-            "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
-            "button_label": "#F3F3F3",
-            "secondary_button_label": "#121212",
-            "shadow": "#121212"
-          }
-        },
-        "inverse": {
-          "settings": {
-            "background": "#242833",
-            "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#000000",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
-          }
-        },
-        "accent-1": {
-          "settings": {
-            "background": "#121212",
-            "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#121212",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
-          }
-        },
-        "accent-2": {
-          "settings": {
-            "background": "#334FB4",
-            "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#334FB4",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
-          }
+  "current": {
+    "bg_color": "#fff9ef",
+    "favicon": "shopify:\/\/shop_images\/submark.png",
+    "small_hero_font": "mono",
+    "image-1": "shopify:\/\/shop_images\/03707235-92E3-46C5-8072-7ADBF412A451.png",
+    "image-2": "shopify:\/\/shop_images\/8A8EA8EF-A623-44D0-8D51-D8F09F631E0B.png",
+    "image-1-text": "Shana curved hoop gold",
+    "image-2-text": "Julia Love Ring Gold",
+    "hero-txt": "Timeless <span class=\"italic\">luxury<\/span> for <br> the everyday <br> woman.",
+    "product_descriptions": "product-descriptions",
+    "product_care": "product-care",
+    "404-message": "Whoops Babes! <br> This Page Does Not Exist",
+    "subscribe": "shopify:\/\/shop_images\/7EEE0EEB-69CC-4DCF-8CB3-BF1EB5F5B7FF.png",
+    "image-4": "shopify:\/\/shop_images\/Rhanie_Earring_Cuff_Gold_01.png",
+    "image-5": "shopify:\/\/shop_images\/Kel_Bold_Bangle_Gold_01.png",
+    "image-6": "shopify:\/\/shop_images\/Tawny_Twice_Hoop_Gold_01.png",
+    "image-7": "shopify:\/\/shop_images\/Shana_Shell_Ring_Gold_02.png",
+    "image-8": "shopify:\/\/shop_images\/Tawny_Twice_Hoop_Gold_02.png",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "main_linklist": "main-menu",
+          "logo": "shopify:\/\/shop_images\/primary.png",
+          "header-text": "Free Shipping On Orders Over $75"
         }
       },
-      "type_header_font": "assistant_n4",
-      "heading_scale": 100,
-      "type_body_font": "assistant_n4",
-      "body_scale": 100,
-      "page_width": 1200,
-      "spacing_sections": 0,
-      "spacing_grid_horizontal": 8,
-      "spacing_grid_vertical": 8,
-      "buttons_border_thickness": 1,
-      "buttons_border_opacity": 100,
-      "buttons_radius": 0,
-      "buttons_shadow_opacity": 0,
-      "buttons_shadow_horizontal_offset": 0,
-      "buttons_shadow_vertical_offset": 4,
-      "buttons_shadow_blur": 5,
-      "variant_pills_border_thickness": 1,
-      "variant_pills_border_opacity": 55,
-      "variant_pills_radius": 40,
-      "variant_pills_shadow_opacity": 0,
-      "variant_pills_shadow_horizontal_offset": 0,
-      "variant_pills_shadow_vertical_offset": 4,
-      "variant_pills_shadow_blur": 5,
-      "inputs_border_thickness": 1,
-      "inputs_border_opacity": 55,
-      "inputs_radius": 0,
-      "inputs_shadow_opacity": 0,
-      "inputs_shadow_horizontal_offset": 0,
-      "inputs_shadow_vertical_offset": 4,
-      "inputs_shadow_blur": 5,
-      "card_style": "standard",
-      "card_image_padding": 0,
-      "card_text_alignment": "left",
-      "card_color_scheme": "background-2",
-      "card_border_thickness": 0,
-      "card_border_opacity": 10,
-      "card_corner_radius": 0,
-      "card_shadow_opacity": 0,
-      "card_shadow_horizontal_offset": 0,
-      "card_shadow_vertical_offset": 4,
-      "card_shadow_blur": 5,
-      "collection_card_style": "standard",
-      "collection_card_image_padding": 0,
-      "collection_card_text_alignment": "left",
-      "collection_card_color_scheme": "background-2",
-      "collection_card_border_thickness": 0,
-      "collection_card_border_opacity": 10,
-      "collection_card_corner_radius": 0,
-      "collection_card_shadow_opacity": 0,
-      "collection_card_shadow_horizontal_offset": 0,
-      "collection_card_shadow_vertical_offset": 4,
-      "collection_card_shadow_blur": 5,
-      "blog_card_style": "standard",
-      "blog_card_image_padding": 0,
-      "blog_card_text_alignment": "left",
-      "blog_card_color_scheme": "background-2",
-      "blog_card_border_thickness": 0,
-      "blog_card_border_opacity": 10,
-      "blog_card_corner_radius": 0,
-      "blog_card_shadow_opacity": 0,
-      "blog_card_shadow_horizontal_offset": 0,
-      "blog_card_shadow_vertical_offset": 4,
-      "blog_card_shadow_blur": 5,
-      "text_boxes_border_thickness": 0,
-      "text_boxes_border_opacity": 10,
-      "text_boxes_radius": 0,
-      "text_boxes_shadow_opacity": 0,
-      "text_boxes_shadow_horizontal_offset": 0,
-      "text_boxes_shadow_vertical_offset": 4,
-      "text_boxes_shadow_blur": 5,
-      "media_border_thickness": 1,
-      "media_border_opacity": 5,
-      "media_radius": 0,
-      "media_shadow_opacity": 0,
-      "media_shadow_horizontal_offset": 0,
-      "media_shadow_vertical_offset": 4,
-      "media_shadow_blur": 5,
-      "popup_border_thickness": 1,
-      "popup_border_opacity": 10,
-      "popup_corner_radius": 0,
-      "popup_shadow_opacity": 0,
-      "popup_shadow_horizontal_offset": 0,
-      "popup_shadow_vertical_offset": 4,
-      "popup_shadow_blur": 5,
-      "drawer_border_thickness": 1,
-      "drawer_border_opacity": 10,
-      "drawer_shadow_opacity": 0,
-      "drawer_shadow_horizontal_offset": 0,
-      "drawer_shadow_vertical_offset": 4,
-      "drawer_shadow_blur": 5,
-      "badge_position": "bottom left",
-      "badge_corner_radius": 40,
-      "sale_badge_color_scheme": "accent-2",
-      "sold_out_badge_color_scheme": "inverse",
-      "social_twitter_link": "",
-      "social_facebook_link": "",
-      "social_pinterest_link": "",
-      "social_instagram_link": "",
-      "social_tiktok_link": "",
-      "social_tumblr_link": "",
-      "social_snapchat_link": "",
-      "social_youtube_link": "",
-      "social_vimeo_link": "",
-      "predictive_search_enabled": true,
-      "predictive_search_show_vendor": false,
-      "predictive_search_show_price": false,
-      "currency_code_enabled": true,
-      "cart_type": "notification",
-      "show_vendor": false,
-      "show_cart_note": false,
-      "cart_drawer_collection": "",
-      "sections": {
-        "main-password-header": {
-          "type": "main-password-header",
-          "settings": {
-            "color_scheme": "background-1"
+      "home": {
+        "type": "home",
+        "settings": {
+          "background": "shopify:\/\/shop_images\/8A8EA8EF-A623-44D0-8D51-D8F09F631E0B.png"
+        }
+      },
+      "home-section-1": {
+        "type": "home-section-1",
+        "custom_css": [
+
+        ],
+        "settings": {
+          "title": "New Pieces",
+          "italic-span": "Shop",
+          "sub-title": "New Collection",
+          "collection-desc": "Shop our new pieces. This collection is all about moodiness<br>             and statement pieces. Our doubled pieces are our most<br>             loved. Shop now!",
+          "collection": "new-collection",
+          "product_limit": 6
+        }
+      },
+      "home-section-2": {
+        "type": "home-section-2",
+        "settings": {
+          "title": "Collection",
+          "collections_menu": "collections-menu",
+          "image-1": "shopify:\/\/shop_images\/Tawny_Twice_Hoop_Gold_02.png"
+        }
+      },
+      "home-section-3": {
+        "type": "home-section-3",
+        "settings": {
+          "title": "From",
+          "italic-span": "Our",
+          "blog-desc": "Selected articles from our journal. Editorials, blogs, and<br>\n            interviews. We talk with jewelry designers about their process’<br>\n            and get behind the scenes of jewelry design.",
+          "blog": "blog",
+          "post_limit": 3
+        }
+      },
+      "home-section-4": {
+        "type": "home-section-4",
+        "settings": {
+          "title": "Sign up for<br>                      our Newsletter",
+          "sub-title": "New Get in on the latest launches",
+          "subscribe": "shopify:\/\/shop_images\/7EEE0EEB-69CC-4DCF-8CB3-BF1EB5F5B7FF.png"
+        }
+      },
+      "home-section-5": {
+        "type": "home-section-5",
+        "settings": {
+          "title": "Follow",
+          "title-1": "On Instagram",
+          "italic-span": "Us",
+          "collection": "ig-posts",
+          "ig_limit": 8
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer-quote": "Stealing a <span>moment<\/span>.",
+          "title": "Sign up for<br>our Newsletter",
+          "footer_linklist": "footer"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "section_title": "Subscribe to our newsletter",
+          "subheading": "A short sentence describing what someone will receive by subscribing"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "collections_sidebar": "collections_sidebar"
+        }
+      },
+      "page-template": {
+        "type": "page-template",
+        "settings": {
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "blog_menu": "blog-menu",
+          "blog": "blog"
+        }
+      },
+      "about-template": {
+        "type": "about-template",
+        "blocks": {
+          "b42514a5-6014-4788-a829-4b907e7551a8": {
+            "type": "image",
+            "settings": {
+              "image_about": "shopify:\/\/shop_images\/dce189eac47ae14c7e35d2aa3b29f58c.jpg",
+              "about_text": "<p>Será is a handcrafted, artisan-made, fine jewelry atelier. They were founded in Los Angeles, California, bred to be worn to capture still moments. To remind us to just be.<\/p>",
+              "switch_about_block": false
+            }
           }
         },
-        "main-password-footer": {
-          "type": "main-password-footer",
-          "settings": {
-            "color_scheme": "background-1"
-          }
+        "block_order": [
+          "b42514a5-6014-4788-a829-4b907e7551a8"
+        ],
+        "settings": {
+          "about_heading": "About Us",
+          "about_subHeadline": "Será⏤ translating to <em>'be' in Spanish.<\/em>",
+          "about_text_main": "Será is a handcrafted, artisan-made, fine jewelry atelier. They were founded in Los Angeles, California, bred to be worn to capture still moments. To remind us to just be.",
+          "about_image": "shopify:\/\/shop_images\/ootd_fashion.jpg",
+          "switch_about": false,
+          "alignment": "middle",
+          "about_image_1": "shopify:\/\/shop_images\/Kristin_Rodin_on_Instagram__Current_home_office_until_I_ve_fixed_our_actual_office_upstairs_it_s_under_progress.jpg",
+          "about_text1": "Será is a handcrafted, artisan-made, fine jewelry atelier. They were founded in Los Angeles, California, bred to be worn to capture still moments. To remind us to just be.",
+          "switch_about1": true,
+          "qoute": "“Be — don't try to become” — Osho"
+        }
+      },
+      "contact-template": {
+        "type": "contact-template",
+        "settings": {
+          "contact_image": "shopify:\/\/shop_images\/dce189eac47ae14c7e35d2aa3b29f58c.jpg"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "platform_customizations": {
+    "custom_css": [
+
+    ]
   }
 }

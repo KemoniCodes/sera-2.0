@@ -1,0 +1,374 @@
+<section class="about" style="margin-top: -36rem;">
+  <div class="container">
+    <h2
+      data-aos="fade-up"
+      data-aos-offset="180"
+      data-aos-delay="58"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+    >
+      {{ section.settings.about_heading }}
+    </h2>
+    <div class="aboutInfo" style="margin-bottom:5rem;">
+      <div
+        class="aboutHeadingBlockMain"
+        {% if section.settings.switch_about %}
+          style="
+            display:flex;
+            flex-direction: row-reverse;
+          "
+        {% endif %}
+        style="display:flex;"
+      >
+        <img
+          loading="lazy"
+          src="{{section.settings.about_image | img_url: '600x600'}}"
+          style="max-width: 500px; width: 100%; border: {{settings.border_img_thickness}}px solid {{settings.border_img_color}}; border-radius: {{settings.border_img_radius}};"
+          data-aos="fade-up"
+          data-aos-offset="170"
+          data-aos-delay="60"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+        >
+
+        <div class="aboutHeadingBlockMainText">
+          <h3
+            style="
+              text-align: left;
+              float: right;
+              margin-top: 20rem;
+              margin-right: 7rem;
+              margin-left: 4.5rem;
+            "
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="65"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+          >
+            {{ section.settings.about_subHeadline }}
+          </h3>
+
+          <p
+            style="              width:400px; float: right; margin-right: 11.1rem; position: relative;"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="65"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+          >
+            {{ section.settings.about_text_main }}
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="aboutImgSection"
+        {% if section.settings.switch_about1 %}
+          style="
+            display:flex;
+                flex-direction: row-reverse;
+                top: 8rem;
+            position: relative;
+          "
+        {% endif %}
+        style="
+          display:flex;
+          margin-bottom: 8rem;
+        "
+      >
+        {% if section.settings.switch_about1 %}
+          {% style %}
+            @media only screen and (max-width: 767.98px) {
+              .about .aboutImgSection {
+                flex-direction: column-reverse !important;
+                display: flex !important;
+                top: 0 !important;
+                margin-bottom: 3rem !important;
+              }
+
+              .about .aboutImgSection img {
+                margin-bottom: 3rem !important;
+              }
+            }
+          {% endstyle %}
+        {% endif %}
+        <div
+          style="margin-left: 4rem; width:100%;"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="65"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+        >
+          {% if section.settings.switch_about1 %}
+            {% style %}
+              .aboutImgSection p {
+                width: 400px;
+                margin-right: 3.5rem;
+                position: relative;
+                float: right;
+                top: 7rem;
+              }
+            {% endstyle %}
+          {% endif %}
+          <p>
+            {% style %}
+              .aboutImgSection p {
+                width: 400px;
+                float: left;
+                margin-right: 4rem;
+                top: 8rem;
+                position: relative;
+              }
+            {% endstyle %}
+            {{ section.settings.about_text1 }}
+          </p>
+        </div>
+
+        <img
+          loading="lazy"
+          src="{{section.settings.about_image_1 | img_url: '600x600'}}"
+          {% if section.settings.switch_about1 == false %}
+            style="bottom:13rem; width: 400px; border: {{settings.border_img_thickness}}px solid {{settings.border_img_color}}; border-radius: {{settings.border_img_radius}}; position: relative;"
+          {% endif %}
+
+          style="bottom:0; width: 400px; border: {{settings.border_img_thickness}}px solid {{settings.border_img_color}}; border-radius: {{settings.border_img_radius}}; position: relative; margin-bottom: 16rem;"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="70"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          id="second"
+        >
+      </div>
+
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'image' %}
+            <div
+              class="aboutImgBlock"
+              {% if block.settings.switch_about_block %}
+                style="
+                  display:flex;
+                  align-items: center;
+                  margin-bottom: 8rem;
+                  {% comment %} margin-top: -24rem; {% endcomment %}
+                "
+              {% endif %}
+
+              style="
+                display: flex;
+                flex-direction: row-reverse;
+                margin-bottom: -15rem;
+                {% comment %} margin-bottom: 8rem; {% endcomment %}
+              "
+            >
+              {% style %}
+                @media only screen and (max-width: 767.98px) {
+                  .about .aboutImgBlock {
+                    margin-bottom: 3rem !important;
+                  }
+                  .about .aboutImgBlock img {
+                    margin-bottom: 3rem !important;
+                  }
+                  .about .aboutImgBlock p {
+                    margin-right: 0 !important;
+                  }
+                }
+              {% endstyle %}
+
+              {% if block.settings.switch_about_block %}
+                <img
+                  loading="lazy"
+                  src="{{block.settings.image_about | img_url: '600x600'}}"
+                  data-aos="fade-up"
+                  data-aos-offset="170"
+                  data-aos-delay="60"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  style="max-width: 500px; width: 100%; border: {{settings.border_img_thickness}}px solid {{settings.border_img_color}}; border-radius: {{settings.border_img_radius}};"
+                >
+              {% endif %}
+
+              {% if block.settings.switch_about_block == false %}
+                <img
+                  loading="lazy"
+                  src="{{block.settings.image_about | img_url: '600x600'}}"
+                  data-aos="fade-up"
+                  data-aos-offset="170"
+                  data-aos-delay="60"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  style="position: relative; bottom: 10rem; max-width: 500px; width: 100%; border: {{settings.border_img_thickness}}px solid {{settings.border_img_color}}; border-radius: {{settings.border_img_radius}};"
+                >
+              {% endif %}
+
+              <div
+                {% comment %} style="width:400px;" {% endcomment %}
+                {% comment %} style="margin-left: 4rem;" {% endcomment %}
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="65"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+              >
+                {% if block.settings.switch_about_block == false %}
+                  {% style %}
+                    .aboutImgBlock p {
+                        width:400px; margin-right: 3.5rem;
+                      position: relative;
+                      float:right;
+                      {% comment %} top: 7rem; {% endcomment %}
+                      margin-right: 4rem;
+                      top: 3rem;
+                      position: relative;
+                    }
+                  {% endstyle %}
+                {% endif %}
+                {% if block.settings.switch_about_block %}
+                  {% style %}
+                    .aboutImgBlock p {
+                      margin-left: 3.5rem;
+                    }
+                  {% endstyle %}
+                {% endif %}
+                {{ block.settings.about_text }}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <h3
+      style="
+        text-align: left;
+        float: right;
+        margin-right: 16rem;
+        bottom: 3rem;
+        position: relative;
+        margin-top: 8rem;
+      "
+      data-aos="fade-zoom-in"
+      data-aos-offset="100"
+      data-aos-delay="65"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      id="q"
+    >
+      {{ section.settings.qoute }}
+    </h3>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About Us",
+  "settings": [
+    {
+      "type": "text",
+      "id": "about_heading",
+      "label": "About Heading",
+      "default": "About Us"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "about_subHeadline",
+      "label": "About Sub Headline",
+      "default": " Será⏤ translating to <i>'be'<i> in Spanish."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "about_text_main",
+      "label": "About Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "About Us Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "switch_about",
+      "label": "Switch direction of image and text. *First image and text callout*",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "middle",
+          "label": "Middle"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "middle"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image_1",
+      "label": "About Us Image 2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "about_text1",
+      "label": "About Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "switch_about1",
+      "label": "Switch direction of image and text. *Second image and text callout*",
+      "default": false
+    },
+    {
+      "type": "inline_richtext",
+      "id": "qoute",
+      "label": "About Qoute",
+      "default": "“Be — don't try to become” — Osho"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "aboutImage",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_about",
+          "label": "About Image"
+        },
+        {
+          "type": "richtext",
+          "id": "about_text",
+          "label": "About Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "switch_about_block",
+          "label": "Switch direction of image and text.",
+          "default": false
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

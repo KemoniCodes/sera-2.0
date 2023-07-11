@@ -57,7 +57,7 @@
     {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
       <span class="product__media-icon motion-reduce quick-add-hidden">{% render 'icon-play' %}</span>
       <div class="product__media media">
-        {{ media.preview_image | image_url: width: 1946 | image_tag:
+        {{ media.preview_image | img_url: width: 1946 | image_tag:
           loading: lazy,
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
@@ -68,7 +68,7 @@
       </a>
     {%- else -%}
       <div class="product__media media">
-        {{ media.preview_image | image_url: width: 1946 | image_tag:
+        {{ media.preview_image | img_url: width: 1946 | image_tag:
           loading: lazy,
           sizes: sizes,
           widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
@@ -102,7 +102,7 @@
       </svg>
     </div>
     <div class="product__media media media--transparent">
-      {{ media.preview_image | image_url: width: 1946 | image_tag:
+      {{ media.preview_image | img_url: width: 1946 | image_tag:
         class: image_class,
         loading: lazy,
         sizes: sizes,
@@ -132,7 +132,7 @@
           {%- render 'icon-play' -%}
         {%- endif -%}
       </span>
-      {{ media.preview_image | image_url: width: 1946 | image_tag:
+      {{ media.preview_image | img_url: width: 1946 | image_tag:
         loading: lazy,
         sizes: sizes,
         widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'

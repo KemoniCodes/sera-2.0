@@ -3,18 +3,6 @@
     "name": "General",
     "settings": [
       {
-        "type": "color",
-        "id": "bg_color",
-        "label": "Background Color",
-        "default": "#FFF9EF"
-      },
-      {
-        "type": "color",
-        "id": "text_color",
-        "label": "Text color (example)",
-        "default": "#cccccc"
-      },
-      {
         "type": "image_picker",
         "id": "favicon",
         "label": "Favicon"
@@ -22,25 +10,684 @@
     ]
   },
   {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#FFF9EF"
+      },
+      {
+        "type": "color",
+        "id": "banner_bg_color",
+        "label": "Banner Background Color",
+        "default": "#433E3F"
+      },
+      {
+        "type": "color",
+        "id": "primary_text_color",
+        "label": "Primary Text Color",
+        "default": "#2F2F2F"
+      },
+      {
+        "type": "color",
+        "id": "secondary_text_color",
+        "label": "Secondary Text Color",
+        "default": "#FFF9EF"
+      },
+      {
+        "type": "color",
+        "id": "link_hover_color",
+        "label": "Link Hover Color",
+        "default": "#937D62"
+      }
+    ]
+  },
+  {
     "name": "Cart",
     "settings": [
+      //create settings for button text + styles
       {
         "type": "text",
         "id": "empty_cart_message",
         "label": "Empty Cart Text",
         "default": "No items in your cart"
+      },
+      {
+        "type": "text",
+        "id": "continue_shopping_button",
+        "label": "Continue Shopping Button Text",
+        "default": "Continue Shopping"
+      },
+      {
+        "type": "text",
+        "id": "continue_shopping_button_link",
+        "label": "Continue Shopping Button Link",
+        "default": "/collections/all"
+      },
+      {
+        "type": "checkbox",
+        "id": "continue_shopping_button_style",
+        "default": true,
+        "label": "Secondary Button Style"
+      },
+      {
+        "type": "text",
+        "id": "update_cart_button",
+        "label": "Update Cart Button Text",
+        "default": "Update Cart"
+      },
+      {
+        "type": "checkbox",
+        "id": "update_cart_button_style",
+        "default": false,
+        "label": "Checkout Button Style"
+      },
+      {
+        "type": "text",
+        "id": "checkout_button",
+        "label": "Checkout Button Text",
+        "default": "Checkout <span style='padding-left:.3rem;'>→</span>"
+      },
+      {
+        "type": "checkbox",
+        "id": "checkout_button_style",
+        "default": false,
+        "label": "Checkout Button Style"
+      },
+      {
+        "type": "header",
+        "content": "Slider Cart Settiings"
+      },
+      {
+        "type": "text",
+        "id": "dropright_cart_view_button",
+        "label": "Dropright Cart View Cart Button Text",
+        "default": "View Cart"
+      },
+      {
+        "type": "checkbox",
+        "id": "dropright_cart_view_button_style",
+        "default": true,
+        "label": "Dropright Cart View Cart Button Style"
+      },
+      {
+        "type": "text",
+        "id": "dropright_cart_checkout_button",
+        "label": "Dropright Cart Checkout Button Text",
+        "default": "Checkout"
+      },
+      {
+        "type": "checkbox",
+        "id": "dropright_cart_checkout_button_style",
+        "default": false,
+        "label": "Dropright Cart Checkout Button Style"
       }
+    ]
+  },
+  {
+    "name": "Buttons",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Primary Button Styles"
+      },
+      {
+        "type": "color",
+        "id": "primary_btn_bg_color",
+        "label": "Primary Button Background Color",
+        "default": "#2F2F2F"
+      },
+      {
+        "type": "color",
+        "id": "primary_btn_text_color",
+        "label": "Primary Button Text Color",
+        "default": "#FFF9EF"
+      },
+      {
+        "type": "range",
+        "id": "primary_btn_border_radius",
+        "label": "Primary Button Border Radius",
+        "default": 0,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "header",
+        "content": "Secondary Button Styles"
+      },
+      {
+        "type": "color",
+        "id": "secondary_btn_bg_color",
+        "label": "Secondary Button Background Color",
+        "default": "transparent"
+      },
+      {
+        "type": "color",
+        "id": "secondary_btn_border_color",
+        "label": "Secondary Button Border Color",
+        "default": "#2F2F2F"
+      },
+      {
+        "type": "color",
+        "id": "secondary_btn_hover_bg_color",
+        "label": "Secondary Button Hover Background Color",
+        "default": "#2F2F2F"
+      },
+      {
+        "type": "color",
+        "id": "secondary_btn_hover_text_color",
+        "label": "Secondary Button Hover Text Color",
+        "default": "#FFF9EF"
+      },
+      {
+        "type": "range",
+        "id": "secondary_btn_border_radius",
+        "label": "Secondary Button Border Radius",
+        "default": 0,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "secondary_btn_border_thickness",
+        "label": "Secondary Button Border Thickness",
+        "default": 1,
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "color",
+        "id": "secondary_btn_text_color",
+        "label": "Secondary Button Text Color",
+        "default": "#2F2F2F"
+      },
+      {
+        "type": "header",
+        "content": "Home Hero Button"
+      },
+      {
+        "type": "text",
+        "id": "hero_btn_custom_font",
+        "label": "Home Hero Button Font Name",
+        "default": "Meno Ban Lt It",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "hero_btn_font",
+        "label": "Home Hero Button Font",
+        "default": "helvetica_n4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "hero_btn_font_size",
+        "label": "Home Hero Button Font Size",
+        "default": 13,
+        "min": 11,
+        "max": 50,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "hero_btn_font_weight",
+        "label": "Home Hero Button Font Weight",
+        "default": 400,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "color",
+        "id": "hero_btn_bg_color",
+        "label": "Background Color",
+        "default": "#2F2F2F"
+      },
+      {
+        "type": "color",
+        "id": "hero_btn_text_color",
+        "label": "Text Color",
+        "default": "#FFF9EF"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "hero-btn-txt",
+        "label": "Hero Button Text",
+        "default": "SHOP NOW →"
+      },
+      {
+        "type": "text",
+        "id": "hero-btn-link",
+        "label": "Hero Button Link",
+        "default": "/collections/all"
+      }
+      // {
+      //   "type": "checkbox",
+      //   "id": "button_style_secondary_1",
+      //   "default": false,
+      //   "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+      // }
+      //need to create primary and secondary(outline)
+      //button styles here and then add button settings
+      //in the sections schema where the buttons are and
+      //change button syntax in html
+    ]
+  },
+  {
+    "name": "Borders",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section Border Settings"
+      },
+      {
+        "type": "color",
+        "id": "border_section_color",
+        "label": "Section Border Color",
+        "default": "#2F2F2F"
+      },
+      {
+        "type": "range",
+        "id": "border_section_thickness",
+        "label": "Section Border Thickness",
+        "default": 1,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+      "type": "header",
+      "content": "Image Border Settings"
+    },
+    {
+      "type": "color",
+      "id": "border_img_color",
+      "label": "Image Border Color",
+      "default": "#433E3F"
+    },
+    {
+      "type": "range",
+      "id": "border_img_thickness",
+      "label": "Image Border Thickness",
+      "default": 4,
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "border_img_radius",
+      "label": "Image Border Radius",
+      "default": 0,
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px"
+    }
     ]
   },
   {
     "name": "Typography",
     "settings": [
       {
+        "type": "header",
+        "content": "Banner Text Settings"
+      },
+      {
+        "type": "text",
+        "id": "banner_custom_font",
+        "label": "Custom Banner Font Name",
+        "default": "Meno Ban Lt It",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
         "type": "font_picker",
-        "id": "small_hero_font",
-        "label": "Small Hero Font",
-        "info": "The small labels for the two hero images on the homepage.",
-        "default": "work_sans_n6"
+        "id": "banner_font",
+        "label": "Banner Font",
+        "default": "helvetica_n4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "banner_font_size",
+        "label": "Banner Font Size",
+        "default": 11,
+        "min": 11,
+        "max": 50,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "banner_font_weight",
+        "label": "Banner Font Weight",
+        "default": 400,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "header",
+        "content": "Nav Text Settings"
+      },
+      {
+        "type": "text",
+        "id": "main_nav_custom_font",
+        "label": "Custom Main Nav Font Name",
+        "default": "Meno Ban Lt It",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "main_nav_font",
+        "label": "Main Nav Font",
+        "default": "helvetica_n4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "main_nav_font_size",
+        "label": "Main Nav Font Size",
+        "default": 14,
+        "min": 11,
+        "max": 50,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "main_nav_font_weight",
+        "label": "Main Nav Font Weight",
+        "default": 400,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "header",
+        "content": "Dropdown Submenu Header Text Settings"
+      },
+      {
+        "type": "text",
+        "id": "dropdown_nav_header_custom_font",
+        "label": "Custom Dropdown Nav Header Font Name",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "dropdown_nav_header_font",
+        "label": "Dropdown Nav Header Font",
+        "default": "helvetica_n4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "dropdown_nav_header_font_size",
+        "label": "Dropdown Nav Header Font Size",
+        "default": 16,
+        "min": 11,
+        "max": 50,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "dropdown_nav_header_font_weight",
+        "label": "Dropdown Nav Header Font Weight",
+        "default": 400,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "header",
+        "content": "Dropdown Submenu Text Settings"
+      },
+      {
+        "type": "text",
+        "id": "dropdown_nav_custom_font",
+        "label": "Custom Dropdown Nav Font Name",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "dropdown_nav_font",
+        "label": "Dropdown Nav Font",
+        "default": "helvetica_n4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "dropdown_nav_font_size",
+        "label": "Dropdown Nav Font Size",
+        "default": 13,
+        "min": 11,
+        "max": 50,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "dropdown_nav_font_weight",
+        "label": "Dropdown Nav Font Weight",
+        "default": 400,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "header",
+        "content": "Headings Text Settings"
+      },
+      {
+        "type": "text",
+        "id": "h1_custom_font",
+        "label": "Custom H1 Font Name",
+        "default": "IvyPresto Headline",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "h1_font",
+        "label": "H1 Font",
+        "default": "americana_i4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "h1_font_size",
+        "label": "H1 Font Size",
+        "default": 85,
+        "min": 36,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "h1_font_weight",
+        "label": "H1 Font Weight",
+        "default": 400,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "text",
+        "id": "h2_custom_font",
+        "label": "Custom H2 Font Name",
+        "default": "IvyPresto Headline Reg",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "h2_font",
+        "label": "H2 Font",
+        "default": "americana_i4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "h2_font_size",
+        "label": "H2 Font Size",
+        "default": 64,
+        "min": 48,
+        "max": 80,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "h2_font_weight",
+        "label": "H2 Font Weight",
+        "default": 200,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "text",
+        "id": "h3_custom_font",
+        "label": "Custom H3 Font Name",
+        "default": "IvyPresto Headline Reg",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "h3_font",
+        "label": "H3 Font",
+        "default": "americana_i4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "h3_font_size",
+        "label": "H3 Font Size",
+        "default": 48,
+        "min": 20,
+        "max": 70,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "h3_font_weight",
+        "label": "H3 Font Weight",
+        "default": 200,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "text",
+        "id": "h4_custom_font",
+        "label": "Custom H4 Font Name",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "h4_font",
+        "label": "H4 Font",
+        "default": "helvetica_n4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "h4_font_size",
+        "label": "H4 Font Size",
+        "default": 24,
+        "min": 20,
+        "max": 48,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "h4_font_weight",
+        "label": "H4 Font Weight",
+        "default": 200,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "text",
+        "id": "h5_custom_font",
+        "label": "Custom H5 Font Name",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "h5_font",
+        "label": "H5 Font",
+        "default": "helvetica_n4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "h5_font_size",
+        "label": "H5 Font Size",
+        "default": 12,
+        "min": 11,
+        "max": 50,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "h5_font_weight",
+        "label": "H5 Font Weight",
+        "default": 400,
+        "min": 100,
+        "max": 900,
+        "step": 100
+      },
+      {
+        "type": "header",
+        "content": "Body Text Settings"
+      },
+      {
+        "type": "text",
+        "id": "p_custom_font",
+        "label": "Custom Paragraph Font Name",
+        "info": "This needs to blank if you are using the font picker or a google font."
+      },
+      {
+        "type": "font_picker",
+        "id": "p_font",
+        "label": "Paragraph Font",
+        "default": "helvetica_n4",
+        "info": "When you're not using a custom font use this."
+      },
+      {
+        "type": "range",
+        "id": "p_font_size",
+        "label": "Paragraph Font Size",
+        "default": 16,
+        "min": 11,
+        "max": 32,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "p_font_weight",
+        "label": "Paragraph Font Weight",
+        "default": 200,
+        "min": 100,
+        "max": 900,
+        "step": 100
       }
     ]
   },
@@ -83,18 +730,6 @@
       },
       {
         "type": "text",
-        "id": "hero-btn-txt",
-        "label": "Hero Button Text",
-        "default": "SHOP NOW →"
-      },
-      {
-        "type": "text",
-        "id": "hero-btn-link",
-        "label": "Hero Button Link",
-        "default": "/collections/all"
-      },
-      {
-        "type": "text",
         "id": "hero-subtext",
         "label": "Hero Subtext",
         "default": "jewelry atelier",
@@ -116,11 +751,11 @@
     "name": "Account Page",
     "settings": [
       {
-          "type": "text",
-          "id": "account_no_orders",
-          "label": "No orders",
-          "default": "You haven't placed any orders yet."
-        }
+        "type": "text",
+        "id": "account_no_orders",
+        "label": "No orders",
+        "default": "You haven't placed any orders yet."
+      }
     ]
   },
   {
@@ -128,7 +763,7 @@
     "settings": [
       {
         "type": "text",
-        "id": "404-text",
+        "id": "four_text",
         "label": "404 Text",
         "default": "404",
         "info": "text",
@@ -136,9 +771,9 @@
       },
       {
         "type": "textarea",
-        "id": "404-message",
+        "id": "four_message",
         "label": "404 Message",
-        "default": "Free Shipping On Orders Over $75",
+        "default": "This Page Does Not Exist",
         "info": "text",
         "placeholder": "text"
       }

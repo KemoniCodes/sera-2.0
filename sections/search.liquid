@@ -1,45 +1,55 @@
 <section class="search" style="margin-top: -38rem;">
-    <div class="container">
+  <div class="container">
     {% paginate search.results by 10 %}
-    <form action="/search" method="get" role="search" style="display: flex;">
-        <input placeholder="search" type="search" name="q" value="{{ search.terms | escape }}">
-        <i class="fa fa-search" aria-hidden="true" style="position: relative; right: 1.5rem; font-size: .8rem;top: .5rem;"></i>
-    </form>
+      <form action="/search" method="get" role="search" style="display: flex;">
+        <input class="h5" placeholder="search" type="search" name="q" value="{{ search.terms | escape }}">
+        <i
+          class="fa fa-search"
+          aria-hidden="true"
+          style="position: relative; right: 1.5rem; font-size: .8rem;top: .5rem;"
+        ></i>
+      </form>
 
-    {% if search.performed %}
+      {% if search.performed %}
         <div class="results" style="margin-top: 3rem;">
-            {% for item in search.results %}
-                <div style="position: relative;
-                    padding-bottom: 2rem;
-                    border-bottom: 1px solid;
-                    width: 80vw;
-                    margin-top: 1rem; display: flex;">
-                    <!-- <div style="margin-right: 1.8rem;"> -->
-                        {% if item.featured_image %}
-                        <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
-                        {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
-                        </a>
-                    {% endif %}
-                    <!-- </div> -->
-                    
-                    <div style="text-align: -webkit-left;
-                    left: 1.8rem;
-                    position: relative;
-                    margin-top: 1rem;">
-                        <h5>{{ item.title | link_to: item.url }}</h5>
-                        <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
-                    </div>
-                </div>
-                    {% else %}
-                    no results
-            {% endfor %}  
+          {% for item in search.results %}
+            <div
+              style="
+                position: relative;
+                padding-bottom: 2rem;
+                border-bottom: {{settings.border_section_thickness}}px solid {{settings.border_section_color}};
+                width: 80vw;
+                margin-top: 1rem; display: flex;
+              "
+            >
+              <!-- <div style="margin-right: 1.8rem;"> -->
+              {% if item.featured_image %}
+                <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
+                  {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
+                </a>
+              {% endif %}
+              <!-- </div> -->
+
+              <div
+                style="
+                  text-align: -webkit-left;
+                  left: 1.8rem;
+                  position: relative;
+                  margin-top: 1rem;
+                "
+              >
+                <h5 class="p">{{ item.title | link_to: item.url }}</h5>
+                <p class="h5">{{ item.content | strip_html | truncatewords: 50 }}</p>
+              </div>
+            </div>
+          {% else %}
+            no results
+          {% endfor %}
         </div>
-    {% endif %}
-    <div style="margin-top: .5rem;" class="paginate">
+      {% endif %}
+      <div style="margin-top: .5rem;" class="paginate">
         {% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}
-    </div>
+      </div>
     {% endpaginate %}
-
-    </div>
+  </div>
 </section>
-

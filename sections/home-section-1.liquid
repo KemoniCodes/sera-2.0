@@ -8,10 +8,10 @@
       data-aos-easing="ease-in-out"
       data-aos-mirror="true"
     >
-      <h3>{{ section.settings['sub-title'] }}</h3>
-      <h2>
+      <h5>{{ section.settings['sub-title'] }}</h5>
+      <h3>
         <span>{{ section.settings['italic-span'] }}</span> {{ section.settings.title }}
-      </h2>
+      </h3>
     </div>
 
     {% assign collection = collections[section.settings.collection] %}
@@ -22,14 +22,14 @@
             <!--
               <a href="{{product.url}}">
                   <div class="reveal">
-                      <img class="img-3" data-aos="fade-up"
+                      <img loading="lazy" class="img-3" data-aos="fade-up"
                       data-aos-offset="190"
                       data-aos-delay="55"
                       data-aos-duration="1000"
                       data-aos-easing="ease-in-out"
                       data-aos-mirror="true" src="{{product.featured_image.src | img_url: '500x500'}}"/>
                   </div>
-                      <img class="hidden" src="{{ product.images.last | img_url: '450x450' }}"/>
+                      <img loading="lazy" class="hidden" src="{{ product.images.last | img_url: '450x450' }}"/>
               </a>
             -->
             <a href="{{product.url}}">
@@ -42,8 +42,13 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
               >
-                <img src="{{product.featured_image.src | img_url: '500x500'}}" style="width: 335px; height: 505px">
                 <img
+                  loading="lazy"
+                  src="{{product.featured_image.src | img_url: '500x500'}}"
+                  style="width: 335px; height: 505px"
+                >
+                <img
+                  loading="lazy"
                   class="hidden"
                   src="{{ product.images.last | img_url: '500x500' }}"
                   alt="{{ product.images.last.alt | escape }}"
@@ -61,16 +66,16 @@
               data-aos-easing="ease-in-out"
               data-aos-mirror="true"
             >
-              <h4 class="img-1-text">
+              <h5 class="product-title">
                 <a href="{{product.url}}">{{ product.title }}</a>
-              </h4>
-              <h4 class="price">{{ product.price | money }}</h4>
+              </h5>
+              <h5 class="price">{{ product.price | money }}</h5>
             </div>
           </div>
         </div>
       {% endfor %}
     </div>
-    <h3
+    <p
       id="collection-desc"
       data-aos="fade-up"
       data-aos-offset="180"
@@ -80,9 +85,19 @@
       data-aos-mirror="true"
     >
       {{ section.settings['collection-desc'] }}
-    </h3>
+    </p>
   </div>
 </section>
+
+{% style %}
+  .section-1 .section {
+    margin-top: 8rem;
+    border-top: {{settings.border_section_thickness}}px solid {{settings.border_section_color}};
+    padding-top: 1rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+{% endstyle %}
 
 {% schema %}
 {
@@ -92,7 +107,7 @@
       "type": "text",
       "id": "title",
       "label": "Heading",
-      "default": "Shop New Pieces"
+      "default": "New Pieces"
     },
     {
       "type": "text",
@@ -110,7 +125,7 @@
       "type": "textarea",
       "id": "collection-desc",
       "label": "Collection Description",
-      "default": "value",
+      "default": "Shop our new pieces. This collection is all about moodiness and statement pieces. Our doubled pieces are our most loved. Shop now!",
       "info": "text",
       "placeholder": "text"
     },

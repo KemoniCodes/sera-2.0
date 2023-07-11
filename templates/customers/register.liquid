@@ -1,0 +1,66 @@
+<section class="login" style="margin-top: -38rem;">
+  <div class="container" style="padding-right: 6rem;">
+    <h2
+      style="
+        text-align: left;
+        margin-bottom: 1.5rem;
+        border-bottom: {{settings.border_section_thickness}}px solid {{settings.border_section_color}};
+        padding-bottom: .5rem;
+      "
+    >
+      Register
+    </h2>
+
+    {% form 'create_customer' %}
+      {{ form.errors | default_errors }}
+
+      <div style="margin-bottom: .5rem;">
+        <label for="first_name">First Name</label>
+        <input
+          type="text"
+          name="customer[first_name]"
+          id="customerFirst"
+          autocorrect="off"
+          autocapitalize="off"
+        >
+      </div>
+      <div style="margin-bottom: .5rem;">
+        <label for="last_name">Last Name</label>
+        <input
+          type="text"
+          name="customer[last_name]"
+          id="customerLast"
+          autocorrect="off"
+          autocapitalize="off"
+        >
+      </div>
+      <div style="margin-bottom: .5rem;">
+        <label for="customerEmail">Email Address</label>
+        <input
+          type="email"
+          name="customer[email]"
+          id="customerEmail"
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="email"
+        >
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label for="customerPassword">Password</label>
+        <input
+          type="password"
+          name="customer[password]"
+          id="customerPassword"
+        >
+      </div>
+
+      <button
+        type="submit"
+        style="width: 10%;"
+        class="h5 secondary-button"
+      >
+        Register
+      </button>
+    {% endform %}
+  </div>
+</section>

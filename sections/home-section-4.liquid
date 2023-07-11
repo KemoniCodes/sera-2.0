@@ -1,74 +1,201 @@
-<section class="section-4" data-aos="fade-up"
-data-aos-offset="200"
-data-aos-delay="50"
-data-aos-duration="1500"
-data-aos-easing="ease-in-out"
-data-aos-mirror="true">
-    <div class="section">
-        <div class="container">
-            <div class="row-1" data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1100"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true">
-                <h3>{{section.settings.sub-title}}</h3> 
+<section
+  class="section-4"
+  data-aos="fade-up"
+  data-aos-offset="200"
+  data-aos-delay="50"
+  data-aos-duration="1500"
+  data-aos-easing="ease-in-out"
+  data-aos-mirror="true"
+>
+  <div class="section">
+    <div class="container">
+      <div
+        class="row-1"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1100"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+      >
+        <h4 class="p">{{ section.settings['sub-title'] }}</h4>
 
-                <h2>{{section.settings.title}}
-                </h2>
-                <!-- <h3 class="collection-desc"> Your email <span>→</span> -->
-                <!-- <input type="email"
-                    name="customer[email]"
-                    id="customerEmail"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    autocomplete="email"
-                    > -->
-                <!-- </h3> -->
+        <h2>{{ section.settings.title }}</h2>
+        <!-- <h3 class="collection-desc"> Your email <span>→</span> -->
+        <!--
+          <input type="email"
+          name="customer[email]"
+          id="customerEmail"
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="email"
+          >
+        -->
+        <!-- </h3> -->
 
-                    <form id="contact-form" method="post" action="" role="form">  
-                      <div class="form-group">
-                        <input type="email" placeholder="Your email    →" class="form-control collection-desc" name="email" id="email">
-                      </div>
-                      <div>
-                        <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit" style="display: none">
-                      </div>
-                    </form>
-                    
-            </div>
-            <div class="row-1">
-                <img src="{{section.settings.subscribe | img_url: '600x600'}}" data-aos="fade-up"
-                data-aos-offset="220"
-                data-aos-delay="58"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="false">
-            </div>
-        </div>
+        <form id="contact-form" method="post" action="" role="form">
+          <div class="form-group">
+            <input
+              type="email"
+              placeholder="{{section.settings.subscribe-input-placeholder}}"
+              class="form-control collection-desc h5"
+              name="email"
+              id="email"
+            >
+          </div>
+          <div>
+            <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit" style="display: none">
+          </div>
+        </form>
+      </div>
+      <div class="row-1">
+        <img
+          loading="lazy"
+          src="{{section.settings.subscribe | img_url: '600x600'}}"
+          data-aos="fade-up"
+          data-aos-offset="220"
+          data-aos-delay="58"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+        >
+      </div>
     </div>
+  </div>
 </section>
 
+{% style %}
+  .section-4 {
+    background-color: {{section.settings.subscribe_bg_color}};
+    margin-top: 14rem;
+  }
+
+  .section-4 .container h4 {
+    color: {{section.settings.subscribe_text_color}};
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 3rem;
+    margin-left: -12rem;
+  }
+
+  .section-4 .container h2 {
+    color: {{section.settings.subscribe_text_color}};
+    text-align: left;
+    padding-top: 3rem;
+    margin-left: -4rem;
+  }
+
+  .section-4 .container {
+    display: table;
+    content: '';
+    clear: both;
+    margin-right: 0;
+    margin-left: 11rem;
+    padding: 0;
+  }
+
+  .container .row-1 img {
+    width: 578px;
+    height: 650px;
+    right: -6rem;
+    position: relative;
+  }
+
+  .container .row-1 {
+    width: 50%;
+    float: left;
+  }
+
+
+  .form-control {
+    /* font-family: 'Helvetica', sans-serif; */
+    color: {{section.settings.subscribe_text_color}} !important;
+    /* font-size: 1rem; */
+    /* font-weight: 200; */
+    text-align: left;
+    padding: 1.3rem;
+    margin-left: -4rem;
+    text-transform: none;
+    width: 65%;
+    margin-top: 3.5rem;
+    padding-left: 1.5rem;
+    background-color: transparent;
+    outline: none;
+    border-radius: 0;
+  }
+
+  .form-control:focus {
+    /* font-family: 'Helvetica', sans-serif; */
+    color: {{section.settings.subscribe_text_color}};
+    background-color: transparent;
+    box-shadow: none;
+    border-color: #fff9ef;
+  }
+
+  input::placeholder {
+    color: {{section.settings.subscribe_text_color}};
+  }
+
+  .form-control::placeholder {
+    color: {{section.settings.subscribe_text_color}};
+  }
+
+  .section-4 .container h3 span {
+    float: right;
+    /* font-size: 1.3rem; */
+    padding-right: 0.5rem;
+  }
+{% endstyle %}
+
 {% schema %}
+{
+  "name": "Home Section 4",
+  "settings": [
     {
-        "name": "Home Section 4",
-        "settings": [
-            {
-                "type": "text",
-                "id": "title",
-                "label": "Title",
-                "default": "Shop New Pieces"
-            },
-            {
-                "type": "text",
-                "id": "sub-title",
-                "label": "Sub Heading",
-                "default": "Get in on the latest launches"
-            },
-            {
-                "type": "image_picker",
-                "id": "subscribe",
-                "label": "Subscribe Image"
-            }
-        ]
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Sign up for our Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "sub-title",
+      "label": "Sub Heading",
+      "default": "Get in on the latest launches"
+    },
+    {
+      "type": "text",
+      "id": "subscribe-input-placeholder",
+      "label": "Input Placeholder",
+      "default": "Your email    →"
+    },
+    {
+      "type": "range",
+      "id": "footer_input_border_width",
+      "label": "Paragraph Font Size",
+      "default": 1,
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "image_picker",
+      "id": "subscribe",
+      "label": "Subscribe Image"
+    },
+    {
+      "type": "color",
+      "id": "subscribe_bg_color",
+      "label": "Background Color",
+      "default": "#5e503f"
+    },
+    {
+      "type": "color",
+      "id": "subscribe_text_color",
+      "label": "Text Color",
+      "default": "#FFF9EF"
     }
+  ]
+}
 {% endschema %}

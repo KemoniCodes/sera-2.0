@@ -64,7 +64,7 @@
                 {%- endcapture -%}
                 {{
                   block.settings.image
-                  | image_url: width: 1500
+                  | img_url: width: 1500
                   | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
                 }}
               {%- else -%}

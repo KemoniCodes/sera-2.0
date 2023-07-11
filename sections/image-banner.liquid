@@ -1,5 +1,21 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
+<h1>TEST HEADER</h1>
+
+{% style %}
+  /* .home {
+      background-image: url({{ section.settings.background | img_url: '450x450' }}) !important;
+      position: relative;
+      background-size: cover;
+      height: 100vh;
+      background-position-x: -2rem;
+      background-repeat: no-repeat;
+  } */
+
+  h1 {
+        font-family: "{{ settings.h1_font.family }}", {{ settings.h1_font.fallback_families }};
+      }
+{% endstyle %}
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
@@ -68,7 +84,7 @@
       -%}
       {{
         section.settings.image
-        | image_url: width: 3840
+        | img_url: width: 3840
         | image_tag:
           loading: 'lazy',
           width: section.settings.image.width,
@@ -100,7 +116,7 @@
       -%}
       {{
         section.settings.image_2
-        | image_url: width: 3840
+        | img_url: width: 3840
         | image_tag:
           loading: 'lazy',
           width: section.settings.image_2.width,

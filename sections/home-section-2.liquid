@@ -1,64 +1,177 @@
 <section class="section-2">
-    <div class="section" data-aos="fade-up"
+  <div
+    class="section"
+    data-aos="fade-up"
     data-aos-offset="200"
     data-aos-delay="50"
     data-aos-duration="1500"
     data-aos-easing="ease-in-out"
-    data-aos-mirror="true">
-        <div class="container">
-            <h2 data-aos="fade-up"
-            data-aos-offset="220"
-            data-aos-delay="60"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true">{{section.settings.title}}</h2>
-            <div class="collections-menu" data-aos="fade-up"
-            data-aos-offset="235"
-            data-aos-delay="62"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true">
-                <ul>
-                    {% for link in linklists[section.settings.collections_menu].links %}
-                    <li class="reveal">
-                        <a href="{{link.url}}">
-                            {{link.title}}
+    data-aos-mirror="true"
+  >
+    <div class="container">
+      <h3
+        data-aos="fade-up"
+        data-aos-offset="220"
+        data-aos-delay="60"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+      >
+        {{ section.settings.title }}
+      </h3>
+      <div
+        class="collections-menu"
+        data-aos="fade-up"
+        data-aos-offset="235"
+        data-aos-delay="62"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+      >
+        <ul>
+          {% for link in linklists[section.settings.collections_menu].links %}
+            <li class="reveal">
+              <a href="{{link.url}}">
+                {{ link.title }}
 
-                            {% assign collection = link.object %}
-                                {% if collection.image %}
-                                <img src="{{ collection | img_url: 'small' }}"  alt="{{ collection.title | escape }}" class="hidden" id="coll-img" display="block" width="120px" height="auto" />
-                                {% endif %}
-                            <!-- <img class="hover-img" src="{{ section.settings.image-1 | img_url: 'medium' }}"/> -->
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+                {% assign collection = link.object %}
+                {% if collection.image %}
+                  <img
+                    loading="lazy"
+                    src="{{ collection | img_url: 'small' }}"
+                    alt="{{ collection.title | escape }}"
+                    class="hidden"
+                    id="coll-img"
+                    display="block"
+                    width="120px"
+                    height="auto"
+                  >
+                {% endif %}
+                <!--
+                  <img loading="lazy" class="hover-img" src="{{ section.settings.image-1 | img_url: 'medium' }}"/>
+                -->
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
+  </div>
 </section>
 
-{% schema %}
-    {
-        "name": "Home Section 2",
-        "settings": [
-            {
-                "type": "text",
-                "id": "title",
-                "label": "Heading",
-                "default": "Collection"
-            },
-            {
-                "type": "link_list",
-                "id": "collections_menu",
-                "label": "Collections Menu"
-            },
-            {
-                "type": "image_picker",
-                "id": "image-1",
-                "label": "Collections Menu Image"
-            }
+{% style %}
+  section.section-2 div.section {
+  background-color: {{section.settings.collections_menu_bg_color}};
+  }
 
-        ]
+  .section-2 .container {
+    padding-bottom: 4rem;
+  }
+  section.section-2 div.section h3 {
+    text-align: center;
+    padding-top: 2rem;
+    color: {{section.settings.collections_menu_text_color}};
+  }
+
+  .collections-menu {
+    padding-top: 3rem;
+  }
+
+  .collections-menu ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .collections-menu li a {
+    {% unless section.settings.collections_menu_custom_font == blank %}
+    font-family: {{ section.settings.collections_menu_custom_font }};
+    {%else%}
+    font-family: {{ section.settings.collections_menu_font.family }}, {{ section.settings.collections_menu_font.fallback_families }};
+    {% endunless %}
+    color: {{section.settings.collections_menu_text_color}};
+    font-weight: {{ section.settings.collections_menu_font_weight }};
+    font-size: {{section.settings.collections_menu_font_size}}px;
+    text-transform: uppercase;
+    line-height: 100px;
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+
+  .collections-menu li a:hover {
+    color: {{ section.settings.collections_menu_text_hover_color }};
+    text-decoration: none;
+    outline: none;
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Home Section 2",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Collection"
+    },
+    {
+      "type": "link_list",
+      "id": "collections_menu",
+      "label": "Collections Menu"
+    },
+    {
+      "type": "text",
+      "id": "collections_menu_custom_font",
+      "label": "Custom Collections Menu Font Name",
+      "default": "IvyPresto Headline",
+      "info": "This needs to blank if you are using the font picker or a google font."
+    },
+    {
+      "type": "font_picker",
+      "id": "collections_menu_font",
+      "label": "Collections Menu Font",
+      "default": "americana_i4",
+      "info": "When you're not using a custom font use this."
+    },
+    {
+      "type": "range",
+      "id": "collections_menu_font_size",
+      "label": "Collections Menu Font Size",
+      "default": 80,
+      "min": 60,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "collections_menu_font_weight",
+      "label": "Collections Menu Font Weight",
+      "default": 300,
+      "min": 100,
+      "max": 900,
+      "step": 100
+    },
+    {
+      "type": "color",
+      "id": "collections_menu_bg_color",
+      "label": "Background Color",
+      "default": "#937D62"
+    },
+    {
+      "type": "color",
+      "id": "collections_menu_text_color",
+      "label": "Text Color",
+      "default": "#FFF9EF"
+    },
+    {
+      "type": "color",
+      "id": "collections_menu_text_hover_color",
+      "label": "Text Hover Color",
+      "default": "#1B1725"
     }
+  ]
+}
 {% endschema %}

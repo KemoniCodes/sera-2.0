@@ -1,0 +1,51 @@
+<section class="article" style="margin-top: -36rem;">
+  <div class="container" style="max-width: 1100px;">
+    <div
+      class="blog-info"
+      id="blog-info"
+      data-aos="fade-up"
+      data-aos-offset="180"
+      data-aos-delay="58"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      style="
+        display: block;
+        margin: auto;
+        margin-bottom: 4rem;
+      "
+    >
+      <a href="{{article.url}}">
+        {%- if article.image %}
+          <img
+            loading="lazy"
+            src="{{ article.image | img_url: '400x400' }}"
+            class="article-img"
+            data-aos="fade-up"
+            data-aos-offset="190"
+            data-aos-delay="60"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            style="width: 400px; border: {{settings.border_img_thickness}}px solid {{settings.border_img_color}}; border-radius: {{settings.border_img_radius}};"
+          >
+        {% endif %}
+      </a>
+      <div class="titles" style="text-align: center; display: flex; justify-content: center;">
+        <h5 class="date" style="text-align: center; margin-right: 1rem;">
+          {{ article.published_at | date: '%B %Y' }}
+        </h5>
+        <h5>{{ article.tags }}</h5>
+      </div>
+    </div>
+    <h3
+      style="
+        text-align: center;
+        padding-bottom: 1rem
+      "
+    >
+      {{ article.title }}
+    </h3>
+    {{ article.content }}
+  </div>
+</section>

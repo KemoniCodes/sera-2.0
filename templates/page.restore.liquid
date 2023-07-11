@@ -1,0 +1,51 @@
+<section class="recover" style="margin-top: -38rem;">
+  <div class="container" style="padding-right: 6rem;">
+    <h2
+      style="
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        border-bottom: {{settings.border_section_thickness}}px solid {{settings.border_section_color}};
+        padding-bottom: .5rem;
+      "
+    >
+      Reset Password
+    </h2>
+    {% form 'recover_customer_password' %}
+      <!--
+        {% if form.posted_successfully? %}
+            <div role="status">
+            <p>We've sent you an email with a link to update your password.</p>
+            </div>
+        {% endif %}
+
+        <div id="recover"{% unless form.errors %} style="display: none;"{% endunless %}>
+            <p>We will send you an email to reset your password.</p>
+      -->
+
+      {{ form.errors | default_errors }}
+
+      <label for="customerEmail">Email Address</label>
+      <input
+        type="email"
+        name="email"
+        id="customerEmail"
+        autocorrect="off"
+        autocapitalize="off"
+        autocomplete="email"
+        style="margin-bottom: 1rem;"
+      >
+
+      <button
+        type="submit"
+        style="
+          margin-bottom: 1.5rem;
+          width: 9%;
+        "
+        class="h5 secondary-button"
+      >
+        Reset
+      </button>
+      <!-- </div> -->
+    {% endform %}
+  </div>
+</section>

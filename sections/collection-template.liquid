@@ -4,7 +4,7 @@
   <section class="collection-template">
     <div class="container" style="margin-left: 5rem;">
       <div class="collections-sidebar">
-        {% for link in linklists[section.settings.collections_sidebar].links %}
+        {% for link in linklists.collections_sidebar.links %}
           {% if link.links == blank %}
             <li class="nav-item active" style="list-style: none;">
               <a class="nav-link" href="{{link.url}}">
@@ -15,7 +15,7 @@
 
           {% style %}
             .collection-template a:active {
-              color: #937d62;
+              color: {{settings.link_hover_color}};
             }
           {% endstyle %}
 
@@ -91,8 +91,13 @@
                   data-aos-easing="ease-in-out"
                   data-aos-mirror="true"
                 >
-                  <img src="{{product.featured_image.src | img_url: '500x500'}}" style="width: 285px; height: 430px">
                   <img
+                    loading="lazy"
+                    src="{{product.featured_image.src | img_url: '500x500'}}"
+                    style="width: 285px; height: 430px"
+                  >
+                  <img
+                    loading="lazy"
                     class="hidden"
                     src="{{ product.images.last | img_url: '500x500' }}"
                     alt="{{ product.images.last.alt | escape }}"
@@ -110,10 +115,10 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
               >
-                <h4 class="img-1-text">
+                <h5 class="">
                   <a href="{{product.url}}">{{ product.title }}</a>
-                </h4>
-                <h4 class="price">{{ product.price | money }}</h4>
+                </h5>
+                <h5 class="price">{{ product.price | money }}</h5>
               </div>
             </div>
           {% endfor %}
@@ -132,10 +137,9 @@
               {% assign active_class = 'active' %}
               {% style %}
                 .pagination .active {
-                  border: 1px solid #433e3f;
-                  outline: none;
-                  background-color: #2f2f2f;
-                  color: #fff9ef;
+                  background-color: {{settings.primary_btn_bg_color}};
+                  color: {{settings.primary_btn_text_color}};
+                  border-radius: {{settings.primary_btn_border_radius}}px;
                 }
               {% endstyle %}
             {% else %}

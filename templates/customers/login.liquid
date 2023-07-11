@@ -1,0 +1,62 @@
+<section class="login" style="margin-top: -38rem;">
+  <div class="container" style="padding-right: 6rem;">
+    <h2
+      style="
+        text-align: left;
+        margin-bottom: 1.5rem;
+        border-bottom: {{settings.border_section_thickness}}px solid {{settings.border_section_color}};
+        padding-bottom: .5rem;
+      "
+    >
+      Login
+    </h2>
+
+    {% form 'customer_login' %}
+      {{ form.errors | default_errors }}
+
+      <div style="margin-bottom: .5rem;">
+        <label for="customerEmail">Email Address</label>
+        <input
+          type="email"
+          name="customer[email]"
+          id="customerEmail"
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="email"
+        >
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label for="customerPassword">Password</label>
+        <input
+          type="password"
+          name="customer[password]"
+          id="customerPassword"
+        >
+      </div>
+
+      <button
+        type="submit"
+        style="width: 10%;"
+        class="h5 secondary-button"
+      >
+        Log In
+      </button>
+
+      <p>
+        {{ 'Create Account' | customer_register_link }}
+      </p>
+      <p>
+        <a href="/pages/password-recovery">Forgot your password?</a>
+      </p>
+    {% endform %}
+
+    <!--
+      If accounts are set as optional, the following will be shown as an option when coming from checkout, not on the default /login page.
+    -->
+    {% if shop.checkout.guest_login %}
+      {% form 'guest_login' %}
+        <input type="submit" value="Continue as Guest">
+      {% endform %}
+    {% endif %}
+  </div>
+</section>

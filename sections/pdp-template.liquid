@@ -6,6 +6,7 @@
           {% for image in product.images %}
             <div class="image-container" style="width: 397px; height: 599px;">
               <img
+                loading="lazy"
                 src="{{ image.src | img_url: '500x500' }}"
                 class="image-zoom"
                 id="img1"
@@ -24,6 +25,7 @@
             <div class="item" style="width: 86px; height: 130px;">
               <a href="#"
                 ><img
+                  loading="lazy"
                   src="{{ image.src | img_url: '300x300' }}"
                   style="width: 86px; height: 130px;"
                   alt="image"
@@ -39,7 +41,7 @@
       <div class="col-lg">
         <div class="single-product-details">
           <h3>{{ product.title }}</h3>
-          <h3 class="product-price">{{ product.price | money }}</h3>
+          <h4 class="product-price">{{ product.price | money }}</h4>
 
           <div class="product-detail">
             <p style="margin-bottom: 3rem;">{{ product.description }}</p>
@@ -115,7 +117,12 @@
               </div>
             </div>
             <input type="hidden" id="variant-id" name="id" value="{{ product.variants.first.id }}">
-            <button class="add-cart" type="submit">Add to Cart</button>
+            <button
+              class="add-cart h5 {% if section.settings.pdp_button_style %}secondary-button{% else %}primary-button{% endif %}"
+              type="submit"
+            >
+              {{ section.settings.pdp_button }}
+            </button>
           </form>
         </div>
       </div>
@@ -125,22 +132,21 @@
 
 {% comment %} {% section 'product-recommendations' %} {% endcomment %}
 
-{% assign accordionTab = product.metafields.custom.tabs %}
 {% schema %}
 {
   "name": "Product",
   "settings": [
     {
       "type": "text",
-      "label": "Accordion Tab",
-      "id": "accordion_tab",
-      "default": "{{ product.metafields.custom.tabs }}"
-    }
-  ],
-  "blocks": [
+      "id": "pdp_button",
+      "label": "PDP Button Text",
+      "default": "Add to Cart"
+    },
     {
-      "type": "accordion_tab_title",
-      "name": "Accordion Tab"
+      "type": "checkbox",
+      "id": "pdp_button_style",
+      "default": true,
+      "label": "PDP Button Style"
     }
   ]
 }

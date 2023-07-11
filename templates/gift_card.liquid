@@ -11,7 +11,7 @@
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: width: 32, height: 32 }}">
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? -%}
@@ -127,9 +127,10 @@
       <div class="gift-card__image-wrapper">
         {%- if settings.logo != blank -%}
           {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-          {{ settings.logo | image_url: width: 570 | image_tag: class: 'gift-card__image', alt: logo_alt }}
+          {{ settings.logo | img_url: width: 570 | image_tag: class: 'gift-card__image', alt: logo_alt }}
         {%- else %}
           <img
+            loading="lazy"
             class="gift-card__image"
             src="{{ 'gift-card/card.svg' | shopify_asset_url }}"
             alt=""
@@ -147,6 +148,7 @@
       {%- if gift_card.pass_url -%}
         <a href="{{ gift_card.pass_url }}" class="gift_card__apple-wallet no-print">
           <img
+            loading="lazy"
             src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}"
             width="120"
             height="40"

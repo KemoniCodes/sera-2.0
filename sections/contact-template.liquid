@@ -1,0 +1,38 @@
+<section class="contact" style="margin-top: -36rem;">
+    <div class="container">
+        <h2>{{section.settings.contact_title}}</h2>
+
+        <ul style="padding: 0;
+        margin-top: 4rem;
+        display: block;">
+            <li class="h4" style="width: 41%;">{{shop.phone}}</li></a>
+            <a href="mailto:{{shop.email}}"><li class="h4">{{shop.email}}</li></a>
+            <li class="h4" style="width: 60%;">{{shop.address.summary}}</li>
+        </ul>
+
+        <img loading="lazy" src="{{section.settings.contact_image | img_url: '600x600'}}" style="width: 400px; border: {{settings.border_img_thickness}}px solid {{settings.border_img_color}}; border-radius: {{settings.border_img_radius}}; position: relative;
+        left: 45rem;
+        bottom: 11rem;"/>
+    </div>
+</section>
+
+
+
+{% schema %}
+{
+    "name": "Contact Us",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "contact_image",
+            "label": "Contact Us Image"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "contact_title",
+            "label": "Contact title",
+            "default": "Get In Touch."
+        }          
+    ]
+}
+{% endschema %}
