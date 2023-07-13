@@ -8,21 +8,59 @@
     "home_section_1": {
       "type": "home-section-1",
       "settings": {
+        "title": "New Pieces",
+        "italic-span": "Shop",
+        "sub-title": "New Collection",
+        "collection-desc": "Shop our new pieces. This collection is all about moodiness and statement pieces. Our doubled pieces are our most loved. Shop now!",
+        "collection": "",
+        "product_limit": 6
       }
     },
     "home_section_2": {
       "type": "home-section-2",
       "settings": {
+        "title": "Collection",
+        "collections_menu": "",
+        "collections_menu_custom_font": "IvyPresto Headline",
+        "collections_menu_font": "americana_i4",
+        "collections_menu_font_size": 80,
+        "collections_menu_font_weight": 300,
+        "collections_menu_bg_color": "#937D62",
+        "collections_menu_text_color": "#FFF9EF",
+        "collections_menu_text_hover_color": "#1B1725"
       }
     },
     "home_section_3": {
       "type": "home-section-3",
       "settings": {
+        "title": "From",
+        "italic-span": "Our",
+        "title1": "Journal",
+        "blog-desc": "Selected articles from our journal. Editorials, blogs, and interviews. We talk with jewelry designers about their process’ and get behind the scenes of jewelry design.",
+        "blog": "",
+        "post_limit": 3
       }
     },
     "home_section_4": {
       "type": "home-section-4",
       "settings": {
+        "title": "Sign up for our Newsletter",
+        "sub-title": "Get in on the latest launches",
+        "subscribe-input-placeholder": "Your email    →",
+        "footer_input_border_width": 1,
+        "subscribe_bg_color": "#5e503f",
+        "subscribe_text_color": "#FFF9EF"
+      }
+    },
+    "c8382fe5-bf11-4895-a9ef-c2896de16b95": {
+      "type": "home-section-1",
+      "settings": {
+        "title": "New shiz",
+        "italic-span": "Shop",
+        "sub-title": "New shiz",
+        "collection-desc": "Shop our new pieces. This collection is all about moodiness and statement pieces. Our doubled pieces are our most loved. Shop now!",
+        "collection": "new-collection",
+        "product_limit": 6
       }
     }
   },
@@ -31,6 +69,7 @@
     "home_section_1",
     "home_section_2",
     "home_section_3",
-    "home_section_4"
+    "home_section_4",
+    "c8382fe5-bf11-4895-a9ef-c2896de16b95"
   ]
 }
