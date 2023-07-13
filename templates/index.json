@@ -25,9 +25,9 @@
         "collections_menu_font": "americana_i4",
         "collections_menu_font_size": 80,
         "collections_menu_font_weight": 300,
-        "collections_menu_bg_color": "#937D62",
-        "collections_menu_text_color": "#FFF9EF",
-        "collections_menu_text_hover_color": "#1B1725"
+        "collections_menu_bg_color": "#937d62",
+        "collections_menu_text_color": "#fff9ef",
+        "collections_menu_text_hover_color": "#1b1725"
       }
     },
     "home_section_3": {
@@ -49,7 +49,7 @@
         "subscribe-input-placeholder": "Your email    →",
         "footer_input_border_width": 1,
         "subscribe_bg_color": "#5e503f",
-        "subscribe_text_color": "#FFF9EF"
+        "subscribe_text_color": "#fff9ef"
       }
     },
     "c8382fe5-bf11-4895-a9ef-c2896de16b95": {
@@ -62,6 +62,20 @@
         "collection": "new-collection",
         "product_limit": 6
       }
+    },
+    "9437b456-9cc3-4bb0-9948-67c8b44d583c": {
+      "type": "home-section-2",
+      "settings": {
+        "title": "Collection",
+        "collections_menu": "",
+        "collections_menu_custom_font": "IvyPresto Headline",
+        "collections_menu_font": "americana_i4",
+        "collections_menu_font_size": 80,
+        "collections_menu_font_weight": 300,
+        "collections_menu_bg_color": "#1b1725",
+        "collections_menu_text_color": "#FFF9EF",
+        "collections_menu_text_hover_color": "#1B1725"
+      }
     }
   },
   "order": [
@@ -70,6 +84,7 @@
     "home_section_2",
     "home_section_3",
     "home_section_4",
-    "c8382fe5-bf11-4895-a9ef-c2896de16b95"
+    "c8382fe5-bf11-4895-a9ef-c2896de16b95",
+    "9437b456-9cc3-4bb0-9948-67c8b44d583c"
   ]
 }
