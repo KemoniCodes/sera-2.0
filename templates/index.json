@@ -76,6 +76,53 @@
         "collections_menu_text_color": "#FFF9EF",
         "collections_menu_text_hover_color": "#1B1725"
       }
+    },
+    "864f1c64-c3fe-4d80-8346-987418993f6c": {
+      "type": "image-banner",
+      "blocks": {
+        "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-0",
+        "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-1",
+        "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-2"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -85,6 +132,7 @@
     "home_section_3",
     "home_section_4",
     "c8382fe5-bf11-4895-a9ef-c2896de16b95",
-    "9437b456-9cc3-4bb0-9948-67c8b44d583c"
+    "9437b456-9cc3-4bb0-9948-67c8b44d583c",
+    "864f1c64-c3fe-4d80-8346-987418993f6c"
   ]
 }
