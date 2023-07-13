@@ -76,7 +76,11 @@
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              <div
+                class="image-with-text__text p rte {{ block.settings.text_style }}"
+                {{ block.shopify_attributes }}
+                style="{%if section.settings.image-with-text_bg_color != blank %}color: {{section.settings.image-with-text_text_color}};{%endif%}"
+              >
                 {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
