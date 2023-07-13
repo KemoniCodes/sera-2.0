@@ -25,7 +25,7 @@
         "collections_menu_font": "americana_i4",
         "collections_menu_font_size": 80,
         "collections_menu_font_weight": 300,
-        "collections_menu_bg_color": "#937d62",
+        "collections_menu_bg_color": "#937D62",
         "collections_menu_text_color": "#fff9ef",
         "collections_menu_text_hover_color": "#1b1725"
       }
@@ -73,8 +73,8 @@
         "collections_menu_font_size": 80,
         "collections_menu_font_weight": 300,
         "collections_menu_bg_color": "#1b1725",
-        "collections_menu_text_color": "#fff9ef",
-        "collections_menu_text_hover_color": "#1b1725"
+        "collections_menu_text_color": "#FFF9EF",
+        "collections_menu_text_hover_color": "#1B1725"
       }
     },
     "864f1c64-c3fe-4d80-8346-987418993f6c": {
@@ -97,12 +97,6 @@
         "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-2": {
           "type": "buttons",
           "settings": {
-            "image_banner_button": "Shop All",
-            "image_banner_button_link": "\/collections\/all",
-            "image_banner_button_style": false,
-            "image_banner_button2": "Shop All",
-            "image_banner_button2_link": "\/collections\/all",
-            "image_banner_button2_style": true
           }
         }
       },
