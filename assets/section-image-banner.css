@@ -12,7 +12,7 @@
 .banner__box.gradient {
   transform: perspective(0);
 }
-.banner__media {
+.banner__media img {
   object-fit: cover;
   height: 100%;
   width: 100%;
