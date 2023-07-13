@@ -25,7 +25,7 @@
         "collections_menu_font": "americana_i4",
         "collections_menu_font_size": 80,
         "collections_menu_font_weight": 300,
-        "collections_menu_bg_color": "#937d62",
+        "collections_menu_bg_color": "#937D62",
         "collections_menu_text_color": "#fff9ef",
         "collections_menu_text_hover_color": "#1b1725"
       }
