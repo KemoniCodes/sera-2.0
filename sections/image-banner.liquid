@@ -80,10 +80,10 @@
           assign sizes = full_width
         endif
       -%}
+      {%- capture image_url -%}{{ section.settings.image | img_url: '3840x', crop: 'center' }}{%- endcapture -%}
       {{
-        section.settings.image
-        | img_url: width: 3840
-        | image_tag:
+        image_url
+        | img_tag:
           loading: 'lazy',
           width: section.settings.image.width,
           height: image_height,
@@ -112,10 +112,10 @@
           assign sizes = full_width
         endif
       -%}
+      {%- capture image_url_2 -%}{{ section.settings.image_2 | img_url: '3840x', crop: 'center' }}{%- endcapture -%}
       {{
-        section.settings.image_2
-        | img_url: width: 3840
-        | image_tag:
+        image_url_2
+        | img_tag:
           loading: 'lazy',
           width: section.settings.image_2.width,
           height: image_height_2,
@@ -125,6 +125,7 @@
       }}
     </div>
   {%- endif -%}
+
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
