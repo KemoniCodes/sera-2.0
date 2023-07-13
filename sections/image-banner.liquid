@@ -142,15 +142,30 @@
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
-            {%- if block.settings.image_banner_button_link != blank -%}
-              <button
-                type="button"
-                onclick="location.href='{{block.settings.image_banner_button_link}}'"
-                class="{% if block.settings.image_banner_button_style %}secondary-button{% else %}primary-button{% endif %} h5"
-              >
-                {{ block.settings.image_banner_button }}
-              </button>
-            {% endif %}
+            <div
+              class="banner__buttons{% if block.settings.image_banner_button != blank and block.settings.image_banner_button2 != blank %} banner__buttons--multiple{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.image_banner_button_link != blank -%}
+                <button
+                  type="button"
+                  onclick="location.href='{{block.settings.image_banner_button_link}}'"
+                  class="{% if block.settings.image_banner_button_style %}secondary-button{% else %}primary-button{% endif %} h5"
+                >
+                  {{ block.settings.image_banner_button }}
+                </button>
+              {% endif %}
+
+              {%- if block.settings.image_banner_button2_link != blank -%}
+                <button
+                  type="button"
+                  onclick="location.href='{{block.settings.image_banner_button2_link}}'"
+                  class="{% if block.settings.image_banner_button2_style %}secondary-button{% else %}primary-button{% endif %} h5"
+                >
+                  {{ block.settings.image_banner_button2 }}
+                </button>
+              {% endif %}
+            </div>
             {% comment %}
               <div
                 class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
@@ -470,6 +485,24 @@
         {
           "type": "checkbox",
           "id": "image_banner_button_style",
+          "default": false,
+          "label": "Secondary Button Style"
+        },
+        {
+          "type": "text",
+          "id": "image_banner_button2",
+          "label": "Image Banner Button 2 Text",
+          "default": "Shop All"
+        },
+        {
+          "type": "text",
+          "id": "image_banner_button2_link",
+          "label": "Image Banner Button 2 Link",
+          "default": "/collections/all"
+        },
+        {
+          "type": "checkbox",
+          "id": "image_banner_button2_style",
           "default": false,
           "label": "Secondary Button Style"
         }
