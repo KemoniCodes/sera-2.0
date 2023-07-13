@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+h2,p {
+  color: {{settings.secondary_text_color}};
+}
+
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .banner__box.gradient {
   transform: perspective(0);
