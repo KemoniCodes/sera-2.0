@@ -26,7 +26,7 @@
         {% endif %}
       >
         {%- if section.settings.image != blank -%}
-          {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
+          {%- if section.settings.image_behavior == 'ambient' -%}
             {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
             {%- capture sizes -%}
               (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
@@ -39,7 +39,11 @@
               (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
             {%- endcapture -%}
           {%- endif -%}
-          {{ section.settings.image | img_url: width: 1500 | image_tag: loading: 'lazy', sizes: sizes, widths: widths }}
+          {{
+            section.settings.image
+            | image_url: width: 1500
+            | image_tag: loading: 'lazy', sizes: sizes, widths: widths
+          }}
         {%- else -%}
           {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
@@ -243,10 +247,6 @@
         {
           "value": "ambient",
           "label": "t:sections.all.animation.image_behavior.options__2.label"
-        },
-        {
-          "value": "zoom-in",
-          "label": "t:sections.all.animation.image_behavior.options__4.label"
         }
       ],
       "default": "none",
