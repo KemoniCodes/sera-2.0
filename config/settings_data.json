@@ -22,11 +22,7 @@
         "type": "header",
         "settings": {
           "main_linklist": "main-menu",
-          "logo": "shopify:\/\/shop_images\/primary.png",
-          "show_banner": true,
-          "banner-text": "Free Shipping On Orders Over $75",
-          "banner-background": "#433E3F",
-          "banner-text-color": "#FFF9EF"
+          "logo": "shopify:\/\/shop_images\/primary.png"
         }
       },
       "home": {
@@ -89,10 +85,6 @@
         "settings": {
           "footer-quote": "Stealing a <span>moment<\/span>.",
           "title": "Sign up for<br>our Newsletter",
-          "footer_bg_color": "#433e3f",
-          "footer_text_color": "#FFF9EF",
-          "footer_input_border_width": 1,
-          "footer_input_border_radius": 0,
           "footer_linklist": "footer"
         }
       },
@@ -157,18 +149,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "6351728870633735247": {
-        "type": "shopify:\/\/apps\/custom-fields-accordions\/blocks\/app-embed\/c8e1a9ed-bbc3-45ec-9f58-6d45d559e41c",
-        "disabled": false,
-        "settings": {
-          "fontcolor": "",
-          "fontsize": 15,
-          "backgroundcolor": ""
-        }
-      }
-    }
+    ]
   },
   "platform_customizations": {
     "custom_css": [
