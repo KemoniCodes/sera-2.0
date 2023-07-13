@@ -1,13 +1,13 @@
 {
   "current": {
-    "bg_color": "#fff9ef",
     "favicon": "shopify:\/\/shop_images\/submark.png",
-    "small_hero_font": "mono",
+    "bg_color": "#fff9ef",
     "image-1": "shopify:\/\/shop_images\/03707235-92E3-46C5-8072-7ADBF412A451.png",
     "image-2": "shopify:\/\/shop_images\/8A8EA8EF-A623-44D0-8D51-D8F09F631E0B.png",
     "image-1-text": "Shana curved hoop gold",
     "image-2-text": "Julia Love Ring Gold",
     "hero-txt": "Timeless <span class=\"italic\">luxury<\/span> for <br> the everyday <br> woman.",
+    "small_hero_font": "mono",
     "product_descriptions": "product-descriptions",
     "product_care": "product-care",
     "404-message": "Whoops Babes! <br> This Page Does Not Exist",
@@ -23,7 +23,10 @@
         "settings": {
           "main_linklist": "main-menu",
           "logo": "shopify:\/\/shop_images\/primary.png",
-          "header-text": "Free Shipping On Orders Over $75"
+          "show_banner": true,
+          "banner-text": "Free Shipping On Orders Over $75",
+          "banner-background": "#433E3F",
+          "banner-text-color": "#FFF9EF"
         }
       },
       "home": {
@@ -50,8 +53,7 @@
         "type": "home-section-2",
         "settings": {
           "title": "Collection",
-          "collections_menu": "collections-menu",
-          "image-1": "shopify:\/\/shop_images\/Tawny_Twice_Hoop_Gold_02.png"
+          "collections_menu": "collections-menu"
         }
       },
       "home-section-3": {
@@ -87,6 +89,10 @@
         "settings": {
           "footer-quote": "Stealing a <span>moment<\/span>.",
           "title": "Sign up for<br>our Newsletter",
+          "footer_bg_color": "#433e3f",
+          "footer_text_color": "#FFF9EF",
+          "footer_input_border_width": 1,
+          "footer_input_border_radius": 0,
           "footer_linklist": "footer"
         }
       },
@@ -111,8 +117,7 @@
       "blog-template": {
         "type": "blog-template",
         "settings": {
-          "blog_menu": "blog-menu",
-          "blog": "blog"
+          "blog_menu": "blog-menu"
         }
       },
       "about-template": {
@@ -152,7 +157,18 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "6351728870633735247": {
+        "type": "shopify:\/\/apps\/custom-fields-accordions\/blocks\/app-embed\/c8e1a9ed-bbc3-45ec-9f58-6d45d559e41c",
+        "disabled": false,
+        "settings": {
+          "fontcolor": "",
+          "fontsize": 15,
+          "backgroundcolor": ""
+        }
+      }
+    }
   },
   "platform_customizations": {
     "custom_css": [
