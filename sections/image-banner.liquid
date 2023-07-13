@@ -1,19 +1,21 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
-{% style %}
-  /* .home {
-      background-image: url({{ section.settings.background | img_url: '450x450' }}) !important;
-      position: relative;
-      background-size: cover;
-      height: 100vh;
-      background-position-x: -2rem;
-      background-repeat: no-repeat;
-  } */
+{% comment %}
+  {% style %}
+    /* .home {
+        background-image: url({{ section.settings.background | img_url: '450x450' }}) !important;
+        position: relative;
+        background-size: cover;
+        height: 100vh;
+        background-position-x: -2rem;
+        background-repeat: no-repeat;
+    } */
 
-  h1 {
-        font-family: "{{ settings.h1_font.family }}", {{ settings.h1_font.fallback_families }};
-      }
-{% endstyle %}
+    h1 {
+          font-family: "{{ settings.h1_font.family }}", {{ settings.h1_font.fallback_families }};
+        }
+  {% endstyle %}
+{% endcomment %}
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
