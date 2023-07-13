@@ -142,7 +142,7 @@
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
-            {%- if settings.image_banner_button_link != blank -%}
+            {%- if block.settings.image_banner_button_link != blank -%}
               <button
                 type="button"
                 onclick="location.href='{{block.settings.image_banner_button_link}}'"
