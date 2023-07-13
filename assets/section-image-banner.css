@@ -21,6 +21,16 @@
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
+
+.grid--1-col .grid__item {
+  max-width: 100%;
+}
+
+.grid__item {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 50% !important;
+}
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .banner__box.gradient {
   transform: perspective(0);
