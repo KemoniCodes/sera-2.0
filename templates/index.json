@@ -25,7 +25,7 @@
         "collections_menu_font": "americana_i4",
         "collections_menu_font_size": 80,
         "collections_menu_font_weight": 300,
-        "collections_menu_bg_color": "#937D62",
+        "collections_menu_bg_color": "#937d62",
         "collections_menu_text_color": "#fff9ef",
         "collections_menu_text_hover_color": "#1b1725"
       }
@@ -73,8 +73,8 @@
         "collections_menu_font_size": 80,
         "collections_menu_font_weight": 300,
         "collections_menu_bg_color": "#1b1725",
-        "collections_menu_text_color": "#FFF9EF",
-        "collections_menu_text_hover_color": "#1B1725"
+        "collections_menu_text_color": "#fff9ef",
+        "collections_menu_text_hover_color": "#1b1725"
       }
     },
     "864f1c64-c3fe-4d80-8346-987418993f6c": {
@@ -83,20 +83,24 @@
         "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "heading": "Image banner"
           }
         },
         "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-1": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "text": "Give customers details about the banner image(s) or content on the template."
           }
         },
         "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-2": {
           "type": "buttons",
           "settings": {
+            "image_banner_button": "Shop All",
+            "image_banner_button_link": "\/collections\/all",
+            "image_banner_button_style": false,
+            "image_banner_button2": "Shop All",
+            "image_banner_button2_link": "\/collections\/all",
+            "image_banner_button2_style": true
           }
         }
       },
@@ -106,7 +110,6 @@
         "template--15819639226563__864f1c64-c3fe-4d80-8346-987418993f6c-16892748469b1f97a5-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Kristin_Rodin_on_Instagram__Current_home_office_until_I_ve_fixed_our_actual_office_upstairs_it_s_under_progress.jpg",
         "image_2": "shopify:\/\/shop_images\/dce189eac47ae14c7e35d2aa3b29f58c.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
