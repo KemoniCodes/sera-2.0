@@ -8,67 +8,21 @@
     "home_section_1": {
       "type": "home-section-1",
       "settings": {
-        "title": "New Pieces",
-        "italic-span": "Shop",
-        "sub-title": "New Collection",
-        "collection-desc": "Shop our new pieces. This collection is all about moodiness and statement pieces. Our doubled pieces are our most loved. Shop now!",
-        "collection": "",
-        "product_limit": 6
       }
     },
     "home_section_2": {
       "type": "home-section-2",
       "settings": {
-        "title": "Collection",
-        "collections_menu": "",
-        "collections_menu_custom_font": "IvyPresto Headline",
-        "collections_menu_font": "americana_i4",
-        "collections_menu_font_size": 80,
-        "collections_menu_font_weight": 300,
-        "collections_menu_bg_color": "#937d62",
-        "collections_menu_text_color": "#fff9ef",
-        "collections_menu_text_hover_color": "#1b1725"
       }
     },
     "home_section_3": {
       "type": "home-section-3",
       "settings": {
-        "title": "From",
-        "italic-span": "Our",
-        "title1": "Journal",
-        "blog-desc": "Selected articles from our journal. Editorials, blogs, and interviews. We talk with jewelry designers about their process’ and get behind the scenes of jewelry design.",
-        "blog": "",
-        "post_limit": 3
       }
     },
     "home_section_4": {
       "type": "home-section-4",
       "settings": {
-        "title": "Sign up for our Newsletter",
-        "sub-title": "Get in on the latest launches",
-        "subscribe-input-placeholder": "Your email    →",
-        "footer_input_border_width": 1,
-        "subscribe_bg_color": "#5e503f",
-        "subscribe_text_color": "#fff9ef"
-      }
-    },
-    "1689273115f26f0e9a": {
-      "type": "apps",
-      "blocks": {
-        "cdcd97d1-1db9-41b7-bf3b-0483219283fe": {
-          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "heading_size": 20,
-            "feed_width": 100,
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "cdcd97d1-1db9-41b7-bf3b-0483219283fe"
-      ],
-      "settings": {
-        "include_margins": true
       }
     }
   },
@@ -77,7 +31,6 @@
     "home_section_1",
     "home_section_2",
     "home_section_3",
-    "home_section_4",
-    "1689273115f26f0e9a"
+    "home_section_4"
   ]
 }
