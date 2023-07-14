@@ -1,10 +1,23 @@
+{% style %}
+  video {
+    width: 100vw;
+  }
+{% endstyle %}
 <div class="video-section">
   <h2>{{ section.settings.heading }}</h2>
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'video-stored' %}
         <div class="stored-video" {{ block.shopify_attributes }}>
-          {{ block.settings.video | media_tag }}
+          {{
+            block.settings.video
+            | media_tag:
+              image_size: '1100x',
+              autoplay: section.settings.enable_video_autoplay,
+              loop: section.settings.enable_video_looping,
+              controls: section.settings.enable_video_controls,
+              muted: section.settings.enable_video_audio
+          }}
         </div>
       {% when 'external-video' %}
         <div class="external-video" {{ block.shopify_attributes }}>
@@ -69,6 +82,30 @@
           "id": "description",
           "label": "Video alt text",
           "info": "Describe the video for customers using screen readers."
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_video_looping",
+          "label": "Enable Video Looping",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_video_controls",
+          "label": "Show Video Controls",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_video_autoplay",
+          "label": "Autoplay Video",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_video_audio",
+          "label": "Mute Video",
+          "default": true
         }
       ]
     }
