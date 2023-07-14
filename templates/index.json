@@ -178,8 +178,7 @@
         "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-0": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "Talk about your brand"
           }
         },
         "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-1": {
@@ -191,12 +190,12 @@
         "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "rich_text_button": "Shop All",
+            "rich_text_button_link": "\/collections\/all",
+            "rich_text_button_style": false,
+            "rich_text_button2": "Shop All",
+            "rich_text_button2_link": "\/collections\/all",
+            "rich_text_button2_style": false
           }
         }
       },
@@ -206,6 +205,8 @@
         "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-2"
       ],
       "settings": {
+        "rich_text_bg_color": "#1b1725",
+        "rich_text_text_color": "#fff9ef",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
