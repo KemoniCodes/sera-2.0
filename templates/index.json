@@ -217,19 +217,16 @@
     "5088a481-e8c4-4aad-8a05-e73b5ed0be90": {
       "type": "video",
       "blocks": {
-        "caa25848-3302-4334-9234-c2baad60dd35": {
-          "type": "video-stored",
+        "7ce50cd7-ebd6-4928-a5a3-a5d6aa6d0cfe": {
+          "type": "external-video",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Screen Recording 2023-06-02 at 8.36.47 PM.mov",
-            "enable_video_looping": true,
-            "enable_video_controls": false,
-            "enable_video_autoplay": true,
-            "enable_video_audio": true
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         }
       },
       "block_order": [
-        "caa25848-3302-4334-9234-c2baad60dd35"
+        "7ce50cd7-ebd6-4928-a5a3-a5d6aa6d0cfe"
       ],
       "settings": {
         "heading": "Video",
