@@ -236,6 +236,67 @@
         "heading_alignment": "center",
         "full_width_video": false
       }
+    },
+    "b5a197d0-f27c-4b42-ab70-7c8f02a1c121": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--15819639226563__b5a197d0-f27c-4b42-ab70-7c8f02a1c121-16893715197842e069-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p>very coll jfjafjiorea fikjreafn fjioafirf. jfieroajfigoea jioerjafrekjao. jrijiaooiae jiorjaeoinfioraejoiaojga<\/p>",
+            "page": ""
+          }
+        },
+        "template--15819639226563__b5a197d0-f27c-4b42-ab70-7c8f02a1c121-16893715197842e069-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--15819639226563__b5a197d0-f27c-4b42-ab70-7c8f02a1c121-16893715197842e069-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--15819639226563__b5a197d0-f27c-4b42-ab70-7c8f02a1c121-16893715197842e069-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15819639226563__b5a197d0-f27c-4b42-ab70-7c8f02a1c121-16893715197842e069-0",
+        "template--15819639226563__b5a197d0-f27c-4b42-ab70-7c8f02a1c121-16893715197842e069-1",
+        "template--15819639226563__b5a197d0-f27c-4b42-ab70-7c8f02a1c121-16893715197842e069-2",
+        "template--15819639226563__b5a197d0-f27c-4b42-ab70-7c8f02a1c121-16893715197842e069-3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -249,6 +310,7 @@
     "864f1c64-c3fe-4d80-8346-987418993f6c",
     "e874e3dd-e046-4a3f-b356-7e9d67c36713",
     "95af2ef9-85df-4854-9fa8-70ffcb997d46",
-    "5088a481-e8c4-4aad-8a05-e73b5ed0be90"
+    "5088a481-e8c4-4aad-8a05-e73b5ed0be90",
+    "b5a197d0-f27c-4b42-ab70-7c8f02a1c121"
   ]
 }
