@@ -2,8 +2,9 @@
   video {
     {% if block.settings.full_width_video == true %}
     width: 100vw;
-    {% endif %}
+    {%else%}
     width: 80vw;
+    {% endif %}
   }
 
   .stored-video {
