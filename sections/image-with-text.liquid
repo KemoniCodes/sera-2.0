@@ -1,13 +1,15 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
+{% comment %} if backgorund is equal to transparent then show primary text color  {% endcomment %}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-  .image-with-text h2, .image-with-text p, {%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' %}.image-with-text button{% endif %} {
-    border-color: {{section.settings.image-with-text_text_color}};
-    color: {{section.settings.image-with-text_text_color}};
+  .image-with-text h2, .image-with-text p, {%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' and section.settings.image-with-text_text_color != 'rgba(0,0,0,0)' %}.image-with-text button{% endif %} {
+    {%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' and section.settings.image-with-text_text_color != 'rgba(0,0,0,0)' %}border-color: {{section.settings.image-with-text_text_color}}; {%else%}border-color:{{settings.primary_text_color}}; {%endif%}
+    {%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' and section.settings.image-with-text_text_color != 'rgba(0,0,0,0)' %}color: {{section.settings.image-with-text_text_color}}; {%else%}color:{{settings.primary_text_color}}; {%endif%}
   }
 
   .image-with-text button:hover {
@@ -70,7 +72,7 @@
             {%- when 'heading' -%}
               <h2
                 class="image-with-text__heading inline-richtext"
-                style="{%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' %}color: {{section.settings.image-with-text_text_color}}; {%else%}color:{{settings.primary_text_color}}; {%endif%}"
+                style="{%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' and section.settings.image-with-text_text_color != 'rgba(0,0,0,0)' %}color: {{section.settings.image-with-text_text_color}}; {%else%}color:{{settings.primary_text_color}}; {%endif%}"
                 {{ block.shopify_attributes }}
                 {{ section.shopify_attributes }}
               >
@@ -79,8 +81,9 @@
             {%- when 'caption' -%}
               <p
                 class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
-                style="{%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' %}color: {{section.settings.image-with-text_text_color}};{%endif%}"
+                style="{%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' and section.settings.image-with-text_text_color != 'rgba(0,0,0,0)' %}color: {{section.settings.image-with-text_text_color}}; {%else%}color:{{settings.primary_text_color}}; {%endif%}"
                 {{ block.shopify_attributes }}
+                {{ section.shopify_attributes }}
               >
                 {{ block.settings.caption | escape }}
               </p>
@@ -88,7 +91,8 @@
               <div
                 class="image-with-text__text p rte {{ block.settings.text_style }}"
                 {{ block.shopify_attributes }}
-                style="{%if section.settings.image-with-text_bg_color != blank %}color: {{section.settings.image-with-text_text_color}};{%endif%}"
+                {{ section.shopify_attributes }}
+                style="{%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' and section.settings.image-with-text_text_color != 'rgba(0,0,0,0)' %}color: {{section.settings.image-with-text_text_color}}; {%else%}color:{{settings.primary_text_color}}; {%endif%}"
               >
                 {{ block.settings.text }}
               </div>
