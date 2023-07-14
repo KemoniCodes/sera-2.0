@@ -46,8 +46,8 @@
 
 .collapsible-content-wrapper-narrow {
   margin: 0 auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   max-width: 73.4rem;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .collapsible-content__heading {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   margin-top: 0;
 }
 
@@ -104,10 +104,10 @@
   background: rgba(var(--color-foreground), 0.04);
 }
 
-.collapsible-content summary:hover .accordion__title {
+/* .collapsible-content summary:hover .accordion__title {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
-}
+} */
 
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {

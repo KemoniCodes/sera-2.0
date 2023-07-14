@@ -51,10 +51,21 @@
             {% style %}
               .customfields {
                 border-bottom: none !important;
+                margin-top: 5rem;
+                padding-left: 2rem;
+              }
+
+              .customfields h4:first-child {
+                border-top: none !important;
+              }
+
+              .customfields h4 {
+                letter-spacing: 0.2px !important;
+                border-top: {{settings.border_section_thickness}}px solid {{settings.border_section_color}} !important;
               }
 
               .customfields h4 span {
-                float: none !important;
+                float: right !important;
                 margin-left: 1rem;
               }
               .customfields span:after {
@@ -67,6 +78,14 @@
 
               .customfields span svg {
                 display: none;
+              }
+
+              .customfields h4 span {
+                transition: none !important;
+              }
+
+              .rotate {
+                transform: none !important;
               }
             {% endstyle %}
             {% comment %}

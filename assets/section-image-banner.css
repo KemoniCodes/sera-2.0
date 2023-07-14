@@ -8,9 +8,37 @@
   text-align: center;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 750px) {
+  .grid--2-col-tablet .grid__item {
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+}
+
+.grid--1-col .grid__item {
+  max-width: 100%;
+}
+
+.grid__item {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 50% !important;
+}
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .banner__box.gradient {
   transform: perspective(0);
+}
+.banner__media img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 @media only screen and (max-width: 749px) {
@@ -20,6 +48,10 @@
 
   .banner--content-align-mobile-left .banner__box {
     text-align: left;
+  }
+
+  .grid__item {
+    min-width: 100%;
   }
 }
 
@@ -445,14 +477,14 @@
 
   .banner--content-align-mobile-center .banner__buttons--multiple > * {
     flex-grow: 1;
-    min-width: 22rem;
+    min-width: 10rem;
   }
 }
 
 @media screen and (min-width: 750px) {
-  .banner--content-align-center .banner__buttons--multiple > * {
+  .banner__content .banner__buttons--multiple > * {
     flex-grow: 1;
-    min-width: 22rem;
+    min-width: 10rem;
   }
 
   .banner--content-align-right .banner__buttons--multiple {

@@ -1,21 +1,21 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
-<h1>TEST HEADER</h1>
+{% comment %}
+  {% style %}
+    /* .home {
+        background-image: url({{ section.settings.background | img_url: '450x450' }}) !important;
+        position: relative;
+        background-size: cover;
+        height: 100vh;
+        background-position-x: -2rem;
+        background-repeat: no-repeat;
+    } */
 
-{% style %}
-  /* .home {
-      background-image: url({{ section.settings.background | img_url: '450x450' }}) !important;
-      position: relative;
-      background-size: cover;
-      height: 100vh;
-      background-position-x: -2rem;
-      background-repeat: no-repeat;
-  } */
-
-  h1 {
-        font-family: "{{ settings.h1_font.family }}", {{ settings.h1_font.fallback_families }};
-      }
-{% endstyle %}
+    h1 {
+          font-family: "{{ settings.h1_font.family }}", {{ settings.h1_font.fallback_families }};
+        }
+  {% endstyle %}
+{% endcomment %}
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
@@ -82,10 +82,10 @@
           assign sizes = full_width
         endif
       -%}
+      {%- capture image_url -%}{{ section.settings.image | img_url: '3840x', crop: 'center' }}{%- endcapture -%}
       {{
-        section.settings.image
-        | img_url: width: 3840
-        | image_tag:
+        image_url
+        | img_tag:
           loading: 'lazy',
           width: section.settings.image.width,
           height: image_height,
@@ -114,10 +114,10 @@
           assign sizes = full_width
         endif
       -%}
+      {%- capture image_url_2 -%}{{ section.settings.image_2 | img_url: '3840x', crop: 'center' }}{%- endcapture -%}
       {{
-        section.settings.image_2
-        | img_url: width: 3840
-        | image_tag:
+        image_url_2
+        | img_tag:
           loading: 'lazy',
           width: section.settings.image_2.width,
           height: image_height_2,
@@ -127,6 +127,7 @@
       }}
     </div>
   {%- endif -%}
+
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
@@ -144,34 +145,60 @@
             </div>
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="banner__buttons{% if block.settings.image_banner_button != blank and block.settings.image_banner_button2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
-              {%- if block.settings.button_label_1 != blank -%}
-                <a
-                  {% if block.settings.button_link_1 == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link_1 }}"
-                  {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+              {%- if block.settings.image_banner_button_link != blank -%}
+                <button
+                  type="button"
+                  onclick="location.href='{{block.settings.image_banner_button_link}}'"
+                  class="{% if block.settings.image_banner_button_style %}secondary-button{% else %}primary-button{% endif %} h5"
                 >
-                  {{- block.settings.button_label_1 | escape -}}
-                </a>
-              {%- endif -%}
-              {%- if block.settings.button_label_2 != blank -%}
-                <a
-                  {% if block.settings.button_link_2 == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link_2 }}"
-                  {% endif %}
-                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  {{ block.settings.image_banner_button }}
+                </button>
+              {% endif %}
+
+              {%- if block.settings.image_banner_button2_link != blank -%}
+                <button
+                  type="button"
+                  onclick="location.href='{{block.settings.image_banner_button2_link}}'"
+                  class="{% if block.settings.image_banner_button2_style %}secondary-button{% else %}primary-button{% endif %} h5"
                 >
-                  {{- block.settings.button_label_2 | escape -}}
-                </a>
-              {%- endif -%}
+                  {{ block.settings.image_banner_button2 }}
+                </button>
+              {% endif %}
             </div>
+            {% comment %}
+              <div
+                class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                {%- if block.settings.button_label_1 != blank -%}
+                  <a
+                    {% if block.settings.button_link_1 == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link_1 }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  >
+                    {{- block.settings.button_label_1 | escape -}}
+                  </a>
+                {%- endif -%}
+                {%- if block.settings.button_label_2 != blank -%}
+                  <a
+                    {% if block.settings.button_link_2 == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link_2 }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  >
+                    {{- block.settings.button_label_2 | escape -}}
+                  </a>
+                {%- endif -%}
+              </div>
+            {% endcomment %}
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -384,26 +411,6 @@
           "id": "heading",
           "default": "Image banner",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
         }
       ]
     },
@@ -417,26 +424,6 @@
           "id": "text",
           "default": "Give customers details about the banner image(s) or content on the template.",
           "label": "t:sections.image-banner.blocks.text.settings.text.label"
-        },
-        {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "body",
-              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
-            },
-            {
-              "value": "subtitle",
-              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
-            },
-            {
-              "value": "caption-with-letter-spacing",
-              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
-            }
-          ],
-          "default": "body",
-          "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
         }
       ]
     },
@@ -447,39 +434,39 @@
       "settings": [
         {
           "type": "text",
-          "id": "button_label_1",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_1",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_1",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+          "id": "image_banner_button",
+          "label": "Image Banner Button Text",
+          "default": "Shop All"
         },
         {
           "type": "text",
-          "id": "button_label_2",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+          "id": "image_banner_button_link",
+          "label": "Image Banner Button Link",
+          "default": "/collections/all"
         },
         {
           "type": "checkbox",
-          "id": "button_style_secondary_2",
+          "id": "image_banner_button_style",
           "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+          "label": "Secondary Button Style"
+        },
+        {
+          "type": "text",
+          "id": "image_banner_button2",
+          "label": "Image Banner Button 2 Text",
+          "default": "Shop All"
+        },
+        {
+          "type": "text",
+          "id": "image_banner_button2_link",
+          "label": "Image Banner Button 2 Link",
+          "default": "/collections/all"
+        },
+        {
+          "type": "checkbox",
+          "id": "image_banner_button2_style",
+          "default": false,
+          "label": "Secondary Button Style"
         }
       ]
     }
