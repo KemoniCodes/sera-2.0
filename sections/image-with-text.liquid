@@ -5,6 +5,14 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+  .image-with-text h2, .image-with-text p, {%if section.settings.image-with-text_bg_color != blank %}.image-with-text button{% endif %} {
+    border-color: {{section.settings.image-with-text_text_color}};
+    color: {{section.settings.image-with-text_text_color}};
+  }
+
+  .image-with-text button:hover {
+    border-color: transparent;
+  }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
