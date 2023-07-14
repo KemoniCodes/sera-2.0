@@ -1,10 +1,10 @@
 {% style %}
   video {
-    {% if block.settings.full_width_video != true %}
+    {% if block.settings.full_width_video %}
     width: 80vw;
-    {%else%}
-    width: 100vw;
     {% endif %}
+    width: 100vw;
+
   }
 
   .stored-video {
@@ -100,7 +100,7 @@
           "type": "checkbox",
           "id": "full_width_video",
           "label": "Full Width Video",
-          "default": false
+          "default": true
         },
         {
           "type": "checkbox",
