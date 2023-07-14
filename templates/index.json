@@ -207,8 +207,8 @@
       "settings": {
         "rich_text_bg_color": "",
         "rich_text_text_color": "",
-        "desktop_content_position": "center",
-        "content_alignment": "right",
+        "desktop_content_position": "right",
+        "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
