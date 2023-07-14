@@ -190,12 +190,6 @@
         "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-2": {
           "type": "button",
           "settings": {
-            "rich_text_button": "Shop All",
-            "rich_text_button_link": "\/collections\/all",
-            "rich_text_button_style": false,
-            "rich_text_button2": "Shop All",
-            "rich_text_button2_link": "\/collections\/all",
-            "rich_text_button2_style": false
           }
         }
       },
@@ -205,10 +199,7 @@
         "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-2"
       ],
       "settings": {
-        "rich_text_bg_color": "",
-        "rich_text_text_color": "",
-        "desktop_content_position": "left",
-        "content_alignment": "center",
+        "desktop_content_position": "center",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
