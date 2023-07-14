@@ -1,8 +1,8 @@
 {% style %}
   video {
-    {% unless block.settings.full_width_video %}
+    {% if block.settings.full_width_video == true %}
     width: 100vw;
-    {% endunless %}
+    {% endif %}
     width: 80vw;
   }
 

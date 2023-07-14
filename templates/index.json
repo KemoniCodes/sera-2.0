@@ -220,12 +220,7 @@
         "caa25848-3302-4334-9234-c2baad60dd35": {
           "type": "video-stored",
           "settings": {
-            "video": "shopify:\/\/files\/videos\/Screen Recording 2023-06-02 at 8.36.47 PM.mov",
-            "full_width_video": true,
-            "enable_video_looping": true,
-            "enable_video_controls": false,
-            "enable_video_autoplay": true,
-            "enable_video_audio": true
+            "video": "shopify:\/\/files\/videos\/Screen Recording 2023-06-02 at 8.36.47 PM.mov"
           }
         }
       },
@@ -233,8 +228,7 @@
         "caa25848-3302-4334-9234-c2baad60dd35"
       ],
       "settings": {
-        "heading": "Video",
-        "heading_alignment": "center"
+        "heading": "Video"
       }
     }
   },
