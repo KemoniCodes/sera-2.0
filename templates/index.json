@@ -217,11 +217,11 @@
     "5088a481-e8c4-4aad-8a05-e73b5ed0be90": {
       "type": "video",
       "settings": {
-        "heading": "",
+        "heading": "Video",
         "heading_size": "h1",
         "enable_video_looping": true,
         "video": "shopify:\/\/files\/videos\/Screen Recording 2023-06-02 at 8.36.47 PM.mov",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "",
         "description": "",
         "full_width": true,
         "color_scheme": "",
