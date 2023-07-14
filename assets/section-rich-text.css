@@ -70,7 +70,7 @@
 
 .rich-text__buttons--multiple > * {
   flex-grow: 1;
-  min-width: 22rem;
+  min-width: 10rem;
 }
 
 .rich-text__buttons + .rich-text__buttons {
