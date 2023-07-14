@@ -62,26 +62,6 @@
           "type": "video",
           "id": "video",
           "label": "A Shopify-hosted video"
-        }
-      ]
-    },
-    {
-      "name": "External Video",
-      "type": "external-video",
-      "settings": [
-        {
-          "type": "video_url",
-          "id": "video_url",
-          "accept": ["youtube", "vimeo"],
-          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-          "label": "URL",
-          "info": "Video plays in the page."
-        },
-        {
-          "type": "text",
-          "id": "description",
-          "label": "Video alt text",
-          "info": "Describe the video for customers using screen readers."
         },
         {
           "type": "checkbox",
@@ -106,6 +86,26 @@
           "id": "enable_video_audio",
           "label": "Mute Video",
           "default": true
+        }
+      ]
+    },
+    {
+      "name": "External Video",
+      "type": "external-video",
+      "settings": [
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "accept": ["youtube", "vimeo"],
+          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "label": "URL",
+          "info": "Video plays in the page."
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Video alt text",
+          "info": "Describe the video for customers using screen readers."
         }
       ]
     }
