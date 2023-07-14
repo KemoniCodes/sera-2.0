@@ -1,6 +1,6 @@
 {% style %}
   video {
-    {% if block.settings.full_width_video %}
+    {% if section.settings.full_width_video %}
     width: 100vw;
     {% else %}
     width: 80vw;
@@ -83,6 +83,12 @@
       ],
       "default": "center",
       "label": "Heading Alignment"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width_video",
+      "label": "Full Width Video",
+      "default": true
     }
   ],
   "max_blocks": 1,
@@ -95,12 +101,6 @@
           "type": "video",
           "id": "video",
           "label": "A Shopify-hosted video"
-        },
-        {
-          "type": "checkbox",
-          "id": "full_width_video",
-          "label": "Full Width Video",
-          "default": true
         },
         {
           "type": "checkbox",
