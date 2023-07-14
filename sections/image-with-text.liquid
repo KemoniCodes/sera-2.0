@@ -5,7 +5,7 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-  .image-with-text h2, .image-with-text p, {%if section.settings.image-with-text_bg_color != blank %}.image-with-text button{% endif %} {
+  .image-with-text h2, .image-with-text p, {%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' %}.image-with-text button{% endif %} {
     border-color: {{section.settings.image-with-text_text_color}};
     color: {{section.settings.image-with-text_text_color}};
   }
@@ -70,15 +70,16 @@
             {%- when 'heading' -%}
               <h2
                 class="image-with-text__heading inline-richtext"
-                style="{%unless section.settings.image-with-text_bg_color == blank %}color: {{section.settings.image-with-text_text_color}};{%endunless%}"
+                style="{%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' %}color: {{section.settings.image-with-text_text_color}}; {%else%}color:{{settings.primary_text_color}}; {%endif%}"
                 {{ block.shopify_attributes }}
+                {{ section.shopify_attributes }}
               >
                 {{ block.settings.heading }}
               </h2>
             {%- when 'caption' -%}
               <p
                 class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
-                style="{%if section.settings.image-with-text_bg_color != blank %}color: {{section.settings.image-with-text_text_color}};{%endif%}"
+                style="{%if section.settings.image-with-text_bg_color != 'rgba(0,0,0,0)' %}color: {{section.settings.image-with-text_text_color}};{%endif%}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.caption | escape }}
