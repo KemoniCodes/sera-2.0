@@ -157,8 +157,8 @@
         "template--15819639226563__e874e3dd-e046-4a3f-b356-7e9d67c36713-168928108005b91c36-2"
       ],
       "settings": {
-        "image-with-text_bg_color": "#937D62",
-        "image-with-text_text_color": "rgba(0,0,0,0)",
+        "image-with-text_bg_color": "#1b1725",
+        "image-with-text_text_color": "#fff9ef",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -171,6 +171,48 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "95af2ef9-85df-4854-9fa8-70ffcb997d46": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-0",
+        "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-1",
+        "template--15819639226563__95af2ef9-85df-4854-9fa8-70ffcb997d46-1689305899d176b8a3-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -182,6 +224,7 @@
     "c8382fe5-bf11-4895-a9ef-c2896de16b95",
     "9437b456-9cc3-4bb0-9948-67c8b44d583c",
     "864f1c64-c3fe-4d80-8346-987418993f6c",
-    "e874e3dd-e046-4a3f-b356-7e9d67c36713"
+    "e874e3dd-e046-4a3f-b356-7e9d67c36713",
+    "95af2ef9-85df-4854-9fa8-70ffcb997d46"
   ]
 }
