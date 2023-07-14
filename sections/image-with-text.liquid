@@ -70,7 +70,7 @@
             {%- when 'heading' -%}
               <h2
                 class="image-with-text__heading inline-richtext"
-                style="{%if section.settings.image-with-text_bg_color != blank %}color: {{section.settings.image-with-text_text_color}};{%endif%}"
+                style="{%unless section.settings.image-with-text_bg_color == blank %}color: {{section.settings.image-with-text_text_color}};{%endunless%}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.heading }}
