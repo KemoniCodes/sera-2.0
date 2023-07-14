@@ -7,6 +7,20 @@
     {% endif %}
   }
 
+  .external-video {
+  text-align: center;
+  }
+
+  .external-video iframe {
+    {% if section.settings.full_width_video %}
+    width: 100vw;
+    {% else %}
+    width: 80vw;
+    {% endif %}
+    height:80vh;
+    border: none;
+  }
+
   .stored-video {
     text-align: center;
   }
