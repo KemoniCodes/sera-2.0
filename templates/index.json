@@ -213,6 +213,59 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "faaa0915-fd76-46ea-a3eb-8eb9c510cf05": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15819639226563__faaa0915-fd76-46ea-a3eb-8eb9c510cf05-1689308907506c7980-0": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--15819639226563__faaa0915-fd76-46ea-a3eb-8eb9c510cf05-1689308907506c7980-1": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--15819639226563__faaa0915-fd76-46ea-a3eb-8eb9c510cf05-1689308907506c7980-0",
+        "template--15819639226563__faaa0915-fd76-46ea-a3eb-8eb9c510cf05-1689308907506c7980-1"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
     }
   },
   "order": [
@@ -225,6 +278,7 @@
     "9437b456-9cc3-4bb0-9948-67c8b44d583c",
     "864f1c64-c3fe-4d80-8346-987418993f6c",
     "e874e3dd-e046-4a3f-b356-7e9d67c36713",
-    "95af2ef9-85df-4854-9fa8-70ffcb997d46"
+    "95af2ef9-85df-4854-9fa8-70ffcb997d46",
+    "faaa0915-fd76-46ea-a3eb-8eb9c510cf05"
   ]
 }
