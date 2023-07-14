@@ -158,7 +158,7 @@
       ],
       "settings": {
         "image-with-text_bg_color": "rgba(0,0,0,0)",
-        "image-with-text_text_color": "#fff9ef",
+        "image-with-text_text_color": "rgba(0,0,0,0)",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
