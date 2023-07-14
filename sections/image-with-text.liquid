@@ -22,6 +22,20 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  @media screen and (max-width: 749px) {
+    .image-with-text .grid {
+    display: block;
+    }
+
+    .grid__item {
+      width: 100% !important;
+    }
+
+    .image-with-text .image-with-text__content {
+      padding: 1rem 2rem;
+    }
+  }
 {%- endstyle -%}
 
 {% assign scheme1 = settings.color_schemes | first %}
