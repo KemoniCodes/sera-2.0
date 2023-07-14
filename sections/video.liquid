@@ -1,6 +1,18 @@
 {% style %}
   video {
+    {% unless block.settings.full_width_video != true %}
+    width: 80vw;
+    {% endunless %}
     width: 100vw;
+  }
+
+  .stored-video {
+    text-align: center;
+  }
+
+  .video-section h2 {
+    text-align: {{section.settings.heading_alignment}};
+    padding: 1rem 2rem;
   }
 {% endstyle %}
 <div class="video-section">
@@ -13,10 +25,10 @@
             block.settings.video
             | media_tag:
               image_size: '1100x',
-              autoplay: section.settings.enable_video_autoplay,
-              loop: section.settings.enable_video_looping,
-              controls: section.settings.enable_video_controls,
-              muted: section.settings.enable_video_audio
+              autoplay: block.settings.enable_video_autoplay,
+              loop: block.settings.enable_video_looping,
+              controls: block.settings.enable_video_controls,
+              muted: block.settings.enable_video_audio
           }}
         </div>
       {% when 'external-video' %}
@@ -50,6 +62,26 @@
       "id": "heading",
       "label": "Custom content heading",
       "default": "Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left Alignment"
+        },
+        {
+          "value": "center",
+          "label": "Center Alignment"
+        },
+        {
+          "value": "right",
+          "label": "Right Alignment"
+        }
+      ],
+      "default": "center",
+      "label": "Heading Alignment"
     }
   ],
   "max_blocks": 1,
@@ -65,6 +97,12 @@
         },
         {
           "type": "checkbox",
+          "id": "full_width_video",
+          "label": "Full Width Video",
+          "default": false
+        },
+        {
+          "type": "checkbox",
           "id": "enable_video_looping",
           "label": "Enable Video Looping",
           "default": true
@@ -73,7 +111,7 @@
           "type": "checkbox",
           "id": "enable_video_controls",
           "label": "Show Video Controls",
-          "default": true
+          "default": false
         },
         {
           "type": "checkbox",
