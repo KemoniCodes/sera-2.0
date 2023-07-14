@@ -1,9 +1,9 @@
 {% style %}
   video {
-    {% unless block.settings.full_width_video != true %}
-    width: 80vw;
-    {% endunless %}
+    {% unless block.settings.full_width_video %}
     width: 100vw;
+    {% endunless %}
+    width: 80vw;
   }
 
   .stored-video {
