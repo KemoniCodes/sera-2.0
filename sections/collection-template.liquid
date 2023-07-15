@@ -91,7 +91,7 @@
                   data-aos-easing="ease-in-out"
                   data-aos-mirror="true"
                 >
-                  {% if product.compare_at_price > product.price -%}
+                  {% if product.compare_at_price > product.price and settings.product_badge %}
                     <div
                       class=""
                       style="

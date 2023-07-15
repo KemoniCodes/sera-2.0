@@ -740,6 +740,12 @@
     "name": "Product",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "product_badge",
+        "label": "Show Product Badge",
+        "default": true
+      },
+      {
         "type": "color",
         "id": "product_badge_bg_color",
         "label": "Background Color",
