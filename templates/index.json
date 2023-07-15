@@ -12,7 +12,7 @@
         "italic-span": "Shop",
         "sub-title": "New Collection",
         "collection-desc": "Shop our new pieces. This collection is all about moodiness and statement pieces. Our doubled pieces are our most loved. Shop now!",
-        "collection": "",
+        "collection": "new-collection",
         "product_limit": 6
       }
     },
@@ -20,7 +20,7 @@
       "type": "home-section-2",
       "settings": {
         "title": "Collection",
-        "collections_menu": "",
+        "collections_menu": "collections-menu",
         "collections_menu_custom_font": "IvyPresto Headline",
         "collections_menu_font": "americana_i4",
         "collections_menu_font_size": 80,
@@ -37,7 +37,7 @@
         "italic-span": "Our",
         "title1": "Journal",
         "blog-desc": "Selected articles from our journal. Editorials, blogs, and interviews. We talk with jewelry designers about their process’ and get behind the scenes of jewelry design.",
-        "blog": "",
+        "blog": "blog",
         "post_limit": 3
       }
     },
