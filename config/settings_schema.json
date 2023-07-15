@@ -748,6 +748,29 @@
     ]
   },
   {
+    "name": "Product",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "product_badge",
+        "label": "Show Product Badge",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "product_badge_bg_color",
+        "label": "Background Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "product_badge_text_color",
+        "label": "Text Color",
+        "default": "#FFF9EF"
+      }
+    ]
+  },
+  {
     "name": "Account Page",
     "settings": [
       {
