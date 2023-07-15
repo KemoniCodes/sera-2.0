@@ -42,6 +42,39 @@
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
               >
+                {% if product.compare_at_price > product.price and settings.product_badge %}
+                  <div
+                    class=""
+                    style="
+                      background-color: {{settings.product_badge_bg_color}};
+                      padding: 2.5rem 1rem;
+                      padding-top: 0.5rem;
+                      position: absolute;
+                      border-radius: 100%;
+                      top: 0.55rem;
+                      right: 1rem;
+                    "
+                  >
+                    <span
+                      class="h5"
+                      style="
+                        position: relative;
+                        top: 0.9rem;
+                        font-size: 1rem !important;
+                        {%if settings.product_badge_bg_color != 'rgba(0,0,0,0)' and settings.product_badge_text_color != 'rgba(0,0,0,0)' %}color: {{settings.product_badge_text_color}}; {%else%}color:{{settings.primary_text_color}}; {%endif%}
+                      "
+                    >
+                      -
+                      {{-
+                        product.compare_at_price
+                        | minus: product.price
+                        | times: 100
+                        | divided_by: product.compare_at_price
+                      -}}
+                      %
+                    </span>
+                  </div>
+                {%- endif %}
                 <img
                   loading="lazy"
                   src="{{product.featured_image.src | img_url: '500x500'}}"
