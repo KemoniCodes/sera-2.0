@@ -47,7 +47,6 @@
   {
     "name": "Cart",
     "settings": [
-      //create settings for button text + styles
       {
         "type": "text",
         "id": "empty_cart_message",
@@ -64,7 +63,7 @@
         "type": "text",
         "id": "continue_shopping_button_link",
         "label": "Continue Shopping Button Link",
-        "default": "/collections/all"
+        "default": "\/collections\/all"
       },
       {
         "type": "checkbox",
@@ -88,7 +87,7 @@
         "type": "text",
         "id": "checkout_button",
         "label": "Checkout Button Text",
-        "default": "Checkout <span style='padding-left:.3rem;'>→</span>"
+        "default": "Checkout <span style='padding-left:.3rem;'>→<\/span>"
       },
       {
         "type": "checkbox",
@@ -268,18 +267,8 @@
         "type": "text",
         "id": "hero-btn-link",
         "label": "Hero Button Link",
-        "default": "/collections/all"
+        "default": "\/collections\/all"
       }
-      // {
-      //   "type": "checkbox",
-      //   "id": "button_style_secondary_1",
-      //   "default": false,
-      //   "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
-      // }
-      //need to create primary and secondary(outline)
-      //button styles here and then add button settings
-      //in the sections schema where the buttons are and
-      //change button syntax in html
     ]
   },
   {
@@ -306,35 +295,35 @@
         "unit": "px"
       },
       {
-      "type": "header",
-      "content": "Image Border Settings"
-    },
-    {
-      "type": "color",
-      "id": "border_img_color",
-      "label": "Image Border Color",
-      "default": "#433E3F"
-    },
-    {
-      "type": "range",
-      "id": "border_img_thickness",
-      "label": "Image Border Thickness",
-      "default": 4,
-      "min": 1,
-      "max": 10,
-      "step": 1,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "border_img_radius",
-      "label": "Image Border Radius",
-      "default": 0,
-      "min": 0,
-      "max": 10,
-      "step": 1,
-      "unit": "px"
-    }
+        "type": "header",
+        "content": "Image Border Settings"
+      },
+      {
+        "type": "color",
+        "id": "border_img_color",
+        "label": "Image Border Color",
+        "default": "#433E3F"
+      },
+      {
+        "type": "range",
+        "id": "border_img_thickness",
+        "label": "Image Border Thickness",
+        "default": 4,
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "border_img_radius",
+        "label": "Image Border Radius",
+        "default": 0,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px"
+      }
     ]
   },
   {
@@ -744,6 +733,23 @@
         "type": "image_picker",
         "id": "collections_menu_image",
         "label": "Collections Menu Image"
+      }
+    ]
+  },
+  {
+    "name": "Product",
+    "settings": [
+      {
+        "type": "color",
+        "id": "product_badge_bg_color",
+        "label": "Background Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "product_badge_text_color",
+        "label": "Text Color",
+        "default": "#FFF9EF"
       }
     ]
   },
