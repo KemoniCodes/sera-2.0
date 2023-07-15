@@ -7,6 +7,7 @@
     "image-1-text": "Shana curved hoop gold",
     "image-2-text": "Julia Love Ring Gold",
     "hero-txt": "Timeless <span class=\"italic\">luxury<\/span> for <br> the everyday <br> woman.",
+    "product_badge_bg_color": "#2F2F2F",
     "small_hero_font": "mono",
     "product_descriptions": "product-descriptions",
     "product_care": "product-care",
@@ -25,8 +26,8 @@
           "logo": "shopify:\/\/shop_images\/primary.png",
           "show_banner": true,
           "banner-text": "Free Shipping On Orders Over $75",
-          "banner-background": "#433E3F",
-          "banner-text-color": "#FFF9EF"
+          "banner-background": "#433e3f",
+          "banner-text-color": "#fff9ef"
         }
       },
       "home": {
@@ -90,7 +91,7 @@
           "footer-quote": "Stealing a <span>moment<\/span>.",
           "title": "Sign up for<br>our Newsletter",
           "footer_bg_color": "#433e3f",
-          "footer_text_color": "#FFF9EF",
+          "footer_text_color": "#fff9ef",
           "footer_input_border_width": 1,
           "footer_input_border_radius": 0,
           "footer_linklist": "footer"
