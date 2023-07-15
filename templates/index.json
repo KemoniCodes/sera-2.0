@@ -12,7 +12,7 @@
         "italic-span": "Shop",
         "sub-title": "New Collection",
         "collection-desc": "Shop our new pieces. This collection is all about moodiness and statement pieces. Our doubled pieces are our most loved. Shop now!",
-        "collection": "",
+        "collection": "new-collection",
         "product_limit": 6
       }
     },
