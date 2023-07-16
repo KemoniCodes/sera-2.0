@@ -17,6 +17,10 @@
     display: none;
   }
 
+  .collapsible-content .grid__item {
+    padding: 0 5rem;
+  }
+
   .accordion details {
     border-bottom: {{settings.border_section_thickness}}px solid {{settings.border_section_color}};
   }
@@ -88,6 +92,15 @@
                 }}
               </div>
             </div>
+            {% style %}
+              .collapsible-content__media {
+                padding-bottom: 3rem;
+                justify-content: center;
+              }
+              .collapsible-content img {
+                padding-bottom: 0;
+              }
+            {% endstyle %}
           {% endif %}
           <div class="grid__item">
             {%- for block in section.blocks -%}
