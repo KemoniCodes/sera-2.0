@@ -121,7 +121,7 @@
         "caption": "",
         "heading": "Collapsible content",
         "heading_alignment": "center",
-        "layout": "row",
+        "layout": "section",
         "color_scheme": "",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
