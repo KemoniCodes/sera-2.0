@@ -114,6 +114,59 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "2059eb0c-9c03-46b5-880e-122489b1a392": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--15819639226563__2059eb0c-9c03-46b5-880e-122489b1a392-1689550469b9298448-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": ""
+          }
+        },
+        "template--15819639226563__2059eb0c-9c03-46b5-880e-122489b1a392-1689550469b9298448-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": ""
+          }
+        },
+        "template--15819639226563__2059eb0c-9c03-46b5-880e-122489b1a392-1689550469b9298448-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": ""
+          }
+        },
+        "template--15819639226563__2059eb0c-9c03-46b5-880e-122489b1a392-1689550469b9298448-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15819639226563__2059eb0c-9c03-46b5-880e-122489b1a392-1689550469b9298448-0",
+        "template--15819639226563__2059eb0c-9c03-46b5-880e-122489b1a392-1689550469b9298448-1",
+        "template--15819639226563__2059eb0c-9c03-46b5-880e-122489b1a392-1689550469b9298448-2",
+        "template--15819639226563__2059eb0c-9c03-46b5-880e-122489b1a392-1689550469b9298448-3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_alignment": "center",
+        "layout": "none",
+        "open_first_collapsible_row": false,
+        "image": "shopify:\/\/shop_images\/dce189eac47ae14c7e35d2aa3b29f58c.jpg",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -123,6 +176,7 @@
     "home_section_3",
     "home_section_4",
     "16893740362e187ef3",
-    "198ae51c-5e97-4be4-ac29-1ba3427d486a"
+    "198ae51c-5e97-4be4-ac29-1ba3427d486a",
+    "2059eb0c-9c03-46b5-880e-122489b1a392"
   ]
 }
