@@ -727,16 +727,6 @@
     ]
   },
   {
-    "name": "Collections Menu Images",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "collections_menu_image",
-        "label": "Collections Menu Image"
-      }
-    ]
-  },
-  {
     "name": "Product",
     "settings": [
       {
