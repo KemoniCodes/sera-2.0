@@ -130,7 +130,7 @@
             "settings": {
               "image_about": "shopify:\/\/shop_images\/dce189eac47ae14c7e35d2aa3b29f58c.jpg",
               "about_text": "<p>Será is a handcrafted, artisan-made, fine jewelry atelier. They were founded in Los Angeles, California, bred to be worn to capture still moments. To remind us to just be.<\/p>",
-              "switch_about_block": false
+              "switch_about_block": true
             }
           }
         },
@@ -146,7 +146,7 @@
           "alignment": "middle",
           "about_image_1": "shopify:\/\/shop_images\/Kristin_Rodin_on_Instagram__Current_home_office_until_I_ve_fixed_our_actual_office_upstairs_it_s_under_progress.jpg",
           "about_text1": "Será is a handcrafted, artisan-made, fine jewelry atelier. They were founded in Los Angeles, California, bred to be worn to capture still moments. To remind us to just be.",
-          "switch_about1": true,
+          "switch_about1": false,
           "qoute": "“Be — don't try to become” — Osho"
         }
       },
