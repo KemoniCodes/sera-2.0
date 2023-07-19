@@ -18,41 +18,45 @@
         <div class="blogs" style="justify-content: center; grid-template-columns: 325px 325px 325px;">
           {% for link in linklists[section.settings.blog].links %}
             {% assign blog = link.object %}
-            {% for article in blog.articles limit: section.settings.post_limit %}
-              <div
-                class="blog-info"
-                data-aos="fade-zoom-in"
-                data-aos-offset="180"
-                data-aos-delay="58"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-              >
-                <h5 class="date">
-                  {{ article.published_at | date: '%B %Y' }}
-                </h5>
-                <a href="{{article.url}}">
-                  {%- if article.image %}
-                    <img
-                      loading="lazy"
-                      src="{{ article.image | img_url: '400x400' }}"
-                      class="article-img"
-                      data-aos="fade-zoom-in"
-                      data-aos-offset="190"
-                      data-aos-delay="60"
-                      data-aos-duration="1000"
-                      data-aos-easing="ease-in-out"
-                      data-aos-mirror="true"
-                    >
-                  {% endif %}
-                </a>
-                <div class="titles">
-                  <h5>{{ article.tags }}</h5>
-                  <h4>
-                    <a href="{{article.url}}">{{ article.title }}</a>
-                  </h4>
+            {% assign article_count_limit = section.settings.post_limit | minus: 1 %}
+
+            {% for article in blog.articles limit: article_count_limit %}
+              {% if forloop.index > 0 %}
+                <div
+                  class="blog-info"
+                  data-aos="fade-zoom-in"
+                  data-aos-offset="180"
+                  data-aos-delay="58"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                >
+                  <h5 class="date">
+                    {{ article.published_at | date: '%B %Y' }}
+                  </h5>
+                  <a href="{{article.url}}">
+                    {%- if article.image %}
+                      <img
+                        loading="lazy"
+                        src="{{ article.image | img_url: '400x400' }}"
+                        class="article-img"
+                        data-aos="fade-zoom-in"
+                        data-aos-offset="190"
+                        data-aos-delay="60"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out"
+                        data-aos-mirror="true"
+                      >
+                    {% endif %}
+                  </a>
+                  <div class="titles">
+                    <h5>{{ article.tags }}</h5>
+                    <h4>
+                      <a href="{{article.url}}">{{ article.title }}</a>
+                    </h4>
+                  </div>
                 </div>
-              </div>
+              {% endif %}
             {% endfor %}
           {% endfor %}
         </div>
@@ -111,9 +115,9 @@
       "type": "range",
       "id": "post_limit",
       "label": "Posts",
-      "min": 3,
+      "min": 1,
       "max": 3,
-      "step": 3,
+      "step": 1,
       "default": 3
     }
   ],
